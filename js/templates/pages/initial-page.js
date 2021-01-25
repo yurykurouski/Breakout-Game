@@ -1,5 +1,5 @@
 const startTemplate = `
-<div class="error "><span>Enter username and press Run</span></div>
+<div class="banner"><span>Enter username and press Run</span></div>
 <button id="rules-btn">Rules</button>
 <div id="rules" class="rules">
     <h3>How to play</h3>

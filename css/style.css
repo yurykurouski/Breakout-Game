@@ -1,21 +1,21 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
   * button {
     appearance: none; }
 
 body {
-  background-color: #efefef;
-  color: #616161;
-  font-family: Arial, Helvetica, sans-serif; }
+  background-color: #b5b5b5;
+  color: #444444; }
 
 button {
   background-color: white;
   padding: 10px;
   border: 2px solid #cccccc;
   border-radius: 5px;
-  color: #616161;
+  color: #444444;
   font-weight: bold;
   cursor: pointer;
   font-size: 1.5rem; }
@@ -27,17 +27,21 @@ button {
 .container {
   min-height: 100vh;
   width: 100%;
+  max-width: 1240px;
+  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .container .error {
+  justify-content: center;
+  overflow: hidden;
+  background-color: #efefef; }
+  .container .banner {
     position: absolute;
     top: -50px;
     width: 100%;
     height: 50px;
-    background-color: #616161;
+    background-color: #444444;
     color: #efefef;
     font-size: 2rem;
     font-weight: bold;
@@ -46,18 +50,18 @@ button {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .container .error.error-show {
+    .container .banner.banner-show {
       top: 0; }
   .container #run-game-form {
     display: flex;
     flex-direction: column; }
     .container #run-game-form input {
-      line-height: 2rem;
+      line-height: 4rem;
       padding-left: 20px;
       font-size: 1.5rem;
       border-radius: 3px;
-      border: 2px dotted #cccccc;
-      color: #616161; }
+      border: 3px dotted #cccccc;
+      color: #444444; }
       .container #run-game-form input::placeholder {
         animation-name: flashingInputPlaceholderText;
         animation-duration: 2s;
@@ -83,7 +87,7 @@ button {
     top: 0;
     width: 300px;
     min-height: 100vh;
-    background-color: #616161;
+    background-color: #444444;
     color: #efefef;
     transition: all 0.5s ease-in-out;
     padding: 20px;
@@ -94,17 +98,25 @@ button {
     .container .rules.show {
       left: 0; }
   .container h1 {
-    font-size: 5rem;
+    font-size: 7rem;
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 50px; }
   .container #run-game-btn {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     margin: 50px;
+    text-transform: uppercase;
     font-size: 4rem;
+    font-weight: 800;
     font-style: italic;
     border: 4px solid #cccccc; }
+    .container #run-game-btn:hover {
+      transition: 0.3s;
+      transform: rotate(360deg); }
+    .container #run-game-btn:active {
+      transform: scale(0.98); }
 
 /*# sourceMappingURL=style.css.map */

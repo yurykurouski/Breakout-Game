@@ -1,12 +1,14 @@
 $light: #efefef;
-$dark: #616161;
+$dark: #444444;
 $white: white;
 $border-color: #cccccc;
+$body-bg: #b5b5b5;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 
   button {
     appearance: none;
@@ -14,9 +16,10 @@ $border-color: #cccccc;
 }
 
 body {
-  background-color: $light;
+  background-color: $body-bg;
   color: $dark;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -41,13 +44,18 @@ button {
 .container {
   min-height: 100vh;
   width: 100%;
+  max-width: 1240px;
+  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-color: $light;
+  // font-family: "Montserrat", sans-serif;
 
-  .error {
+  .banner {
     position: absolute;
     top: -50px;
     width: 100%;
@@ -63,7 +71,7 @@ button {
     align-items: center;
     justify-content: center;
 
-    &.error-show {
+    &.banner-show {
       top: 0;
     }
   }
@@ -73,11 +81,11 @@ button {
     flex-direction: column;
 
     input {
-      line-height: 2rem;
+      line-height: 4rem;
       padding-left: 20px;
       font-size: 1.5rem;
       border-radius: 3px;
-      border: 2px dotted $border-color;
+      border: 3px dotted $border-color;
       color: $dark;
 
       &::placeholder {
@@ -119,7 +127,6 @@ button {
     min-height: 100vh;
     background-color: $dark;
     color: $light;
-    // transform: translateX(-400px);
     transition: all 0.5s ease-in-out;
     padding: 20px;
     font-size: 1.2rem;
@@ -135,9 +142,10 @@ button {
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 7rem;
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 50px;
   }
 
@@ -146,8 +154,19 @@ button {
     height: 200px;
     border-radius: 50%;
     margin: 50px;
+    text-transform: uppercase;
     font-size: 4rem;
+    font-weight: 800;
     font-style: italic;
     border: 4px solid $border-color;
+
+    &:hover {
+      transition: 0.3s;
+      transform: rotate(360deg);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 }

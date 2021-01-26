@@ -1,5 +1,6 @@
 const mainTemplate = `
-<h1>hello, </h1>
+<div class="banner banner-greeting"></div>
+
 `
 
 export default mainTemplate;

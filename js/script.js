@@ -1,3 +1,4 @@
+import { playAudio } from './audio/audio.js';
 import {renderPage} from './routing.js';
 
 
@@ -7,6 +8,7 @@ renderPage();
 
 //обработчик события на изменения адресной строки
 window.addEventListener('popstate', () => {
+    playAudio(window);
     renderPage();
 })
 

@@ -12,7 +12,6 @@ export function toggleDisabled() {
 
 export function changeColorMode() {
     const body = document.querySelector('body');
-    console.log(body);
     body.classList.toggle('night-mode');
 }
 

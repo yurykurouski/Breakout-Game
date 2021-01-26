@@ -1,3 +1,4 @@
+import { playAudio } from '../audio/audio.js';
 import runGame from '../run-game.js';
 import startTemplate from '../templates/pages/initial-page.js';
 import { toggleDisabled, changeColorMode } from '../utils.js';
@@ -18,17 +19,22 @@ function renderInitialPage() {
     rulesBtn.addEventListener('click', () => {
         rules.classList.add('show');
         toggleDisabled(runGameFormInput, runGameFormSubmit);
+        playAudio(rulesBtn);
     })
 
     rulesCloseBtn.addEventListener('click', () => {
         rules.classList.remove('show');
         toggleDisabled(runGameFormInput, runGameFormSubmit);
+        playAudio(rulesBtn);
     })
 
 
     //вешаем обрабочик событий для смены светового режима
     const colorModeBtn = document.getElementById('color-mode-btn');
-    colorModeBtn.addEventListener('click', changeColorMode)
+    colorModeBtn.addEventListener('click', () => {
+        changeColorMode(),
+        playAudio(colorModeBtn)
+    })
 
 
     //обработчик событий на кнопку run

@@ -1,5 +1,6 @@
 import renderInitialPage from './render/render-initial.js';
 import renderMainPage from './render/render-main.js';
+import { playAudio } from './audio/audio.js';
 
 
 const INDEX_URL = ['/', '/index.html'];
@@ -28,5 +29,6 @@ export function navigateToUrl(url) {
         window.location.origin + url
     );
 
+    playAudio(window);
     renderPage();
 }

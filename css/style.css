@@ -8,7 +8,12 @@
 
 body {
   background-color: #b5b5b5;
-  color: #444444; }
+  color: #444444;
+  transition: 0.5s; }
+
+.night-mode {
+  transition: 0.5s;
+  filter: invert(0.9); }
 
 button {
   background-color: white;
@@ -78,10 +83,11 @@ button {
   position: absolute;
   left: 50px;
   top: 100px; }
-.container #nigth-mode-btn {
+.container #color-mode-btn {
   position: absolute;
   right: 50px;
-  top: 100px; }
+  top: 100px;
+  width: 50px; }
 .container .rules {
   position: absolute;
   left: -400px;

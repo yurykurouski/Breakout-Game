@@ -18,6 +18,11 @@ $body-bg: #b5b5b5;
 body {
   background-color: $body-bg;
   color: $dark;
+  transition: 0.5s;
+}
+.night-mode {
+  transition: 0.5s;
+  filter: invert(0.9);
 }
 
 button {

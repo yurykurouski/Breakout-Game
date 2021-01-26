@@ -8,7 +8,7 @@ const startTemplate = `
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, magnam.</p>
     <button id="close-rules-btn">Close</button>
 </div>
-<button id="nigth-mode-btn">night</button>
+<button id="color-mode-btn"><i class="fas fa-lightbulb"></i></button>
 
 <H1>Breakout!</H1>
 <form action="" id="run-game-form">

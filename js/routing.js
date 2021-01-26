@@ -12,12 +12,14 @@ export function renderPage() {
 
     if (INDEX_URL.includes(currentUrl)) {
         renderInitialPage();
+        playAudio(window);
         return
     }
 
     
     if (MAIN_URL.includes(currentUrl)) {
         renderMainPage();
+        playAudio(window);
         return
     }
 }
@@ -28,7 +30,6 @@ export function navigateToUrl(url) {
         url,
         window.location.origin + url
     );
-
-    playAudio(window);
     renderPage();
+    playAudio(window);
 }

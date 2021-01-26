@@ -8,7 +8,6 @@ renderPage();
 
 //обработчик события на изменения адресной строки
 window.addEventListener('popstate', () => {
-    playAudio(window);
     renderPage();
 })
 

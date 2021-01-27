@@ -1,0 +1,10 @@
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-style: italic; }
+.container #canvas {
+  background-color: white;
+  display: block;
+  border-radius: 5px; }
+
+/*# sourceMappingURL=main-page.css.map */

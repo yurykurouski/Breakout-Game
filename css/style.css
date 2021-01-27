@@ -130,4 +130,13 @@ button {
   .container #run-game-btn:active {
     transform: scale(0.98); }
 
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-style: italic; }
+.container #canvas {
+  background-color: white;
+  display: block;
+  border-radius: 5px; }
+
 /*# sourceMappingURL=style.css.map */

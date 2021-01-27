@@ -30,7 +30,8 @@ function runGame(event) {
     userList.add(newPlayer);
 
     //изменяем урл и отрисовываем главную страницу данной функцией
-    navigateToUrl(`/main`)
+    navigateToUrl(`/main`);
+
 
     const greetingBanner = document.querySelector('.banner.banner-greeting');
     greetingBanner.innerHTML = `Hello, ${newPlayer.userName}`

@@ -3,9 +3,8 @@ const startTemplate = `
 <button id="rules-btn">Rules</button>
 <div id="rules" class="rules">
     <h3>How to play</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam unde eaque odit, corporis voluptates perferendis
-    tempore eligendi sint. Ea quam suscipit inventore esse saepe asperiores id at non perferendis fugiat!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, magnam.</p>
+    <p>Use your right and left keys to move the paddle to bounce the ball up and break the blocks</p>
+    <p>If you miss the ball you loose.</p>
     <button id="close-rules-btn">Close</button>
 </div>
 <button id="color-mode-btn"><i class="fas fa-lightbulb"></i></button>

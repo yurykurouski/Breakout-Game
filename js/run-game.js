@@ -4,7 +4,7 @@ import storageService from './storage-service.js';
 import userList from './users.js';
 import { showBanner } from './utils.js';
 
-import INITIAL_ZERO_RECORD from './constants.js';
+import {INITIAL_ZERO_RECORD} from './constants.js';
 
 
 function runGame(event) {

@@ -4,14 +4,14 @@ import storageService from './storage-service.js';
 import userList from './users.js';
 import { showBanner } from './utils.js';
 
+import INITIAL_ZERO_RECORD from './constants.js';
+
 
 function runGame(event) {
     //запись имени игрока
     event.preventDefault();
     const formData = new FormData(event.target);
     const userName = formData.get('name');
-
-    console.log('hello')
 
     //выводим подсказку если не введено имя пользователя и нажат run
     if (!userName) {
@@ -23,7 +23,7 @@ function runGame(event) {
 
     const newPlayer = {
         userName: userName,
-        record: 0,
+        record: INITIAL_ZERO_RECORD,
     }
 
 

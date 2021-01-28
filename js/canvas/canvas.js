@@ -1,20 +1,12 @@
-console.log('hell')
-const canvas = document.getElementById('111');
-console.log(canvas)
-const ctx = canvas.getContext('2d');
+import {drawBall} from "./draw-ball.js";
+import { drawPaddle } from "./draw-paddle.js";
+import { drawScore } from "./draw-score.js";
 
-const ball = {
-    posX: canvas.width / 2,
-    posY: canvas.width / 2,
-    radius: 10,
-    speedX: 4,
-    speedY: -4,
+function drawFieldsObjects() {
+    drawBall();
+    drawPaddle;
+    drawScore();
 }
 
-export function drawBall() {
-    ctx.beginPath();
-    ctx.arc(ball.posX, ball.posY, ball.radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'black';
-    ctx.fill;
-    ctx.closePath();
-}
+
+export default drawFieldsObjects;

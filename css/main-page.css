@@ -6,5 +6,8 @@
   background-color: white;
   display: block;
   border-radius: 5px; }
+.container .score {
+  font-size: 2rem;
+  font-weight: bold; }
 
 /*# sourceMappingURL=main-page.css.map */

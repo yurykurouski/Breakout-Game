@@ -4,7 +4,7 @@ import { drawScore } from "./draw-score.js";
 
 function drawFieldsObjects() {
     drawBall();
-    drawPaddle;
+    drawPaddle();
     drawScore();
 }
 

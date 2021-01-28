@@ -1,5 +1,6 @@
 //setInterval для того, чтобы искать канвас после его рендеринга
-export const drawScore = function(){setInterval(() => {
+export const drawScore = function () {
+    setInterval(() => {
     if (document.getElementById("canvas") != null) {
 
         const canvas = document.getElementById('canvas');
@@ -14,4 +15,5 @@ export const drawScore = function(){setInterval(() => {
     clearInterval(drawScore)
     }
 
-}, 500);}
+    }, 500);
+}

@@ -2,7 +2,7 @@ import { playAudio } from "../audio/audio.js";
 
 //setInterval для того, чтобы искать канвас после его рендеринга
 export const drawPaddle = function () {
-    setInterval(() => {
+    const thisInterval = setInterval(() => {
         if (document.getElementById("canvas") != null) {
 
             const canvas = document.getElementById('canvas');
@@ -25,10 +25,8 @@ export const drawPaddle = function () {
             ctx.fill();
             ctx.closePath();
         
-            playAudio();
-    
-            clearInterval(drawPaddle)
+            clearInterval(thisInterval)
         }
 
-    }, 500);
+    }, 300);
 }

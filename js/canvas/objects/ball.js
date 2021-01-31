@@ -12,6 +12,6 @@ class Ball {
 
 const ball = new Ball();
 
-storageService.set('ball', JSON.stringify(ball))
+storageService.set('ball', JSON.stringify(ball));
 
 export default ball;

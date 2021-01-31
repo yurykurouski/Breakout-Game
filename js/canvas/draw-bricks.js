@@ -1,4 +1,5 @@
 import storageService from '../storage-service.js';
+import brickInfo from './objects/brick.js'
 
 const BRICK_COL_COUNT = 7;
 const BRICK_ROW_COUNT = 5;
@@ -10,7 +11,7 @@ export const drawBricks = function () {
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
 
-            const brickInfo = JSON.parse(storageService.get('brickInfo'))
+            // const brickInfo = JSON.parse(storageService.get('brickInfo'))
             const bricks = [];
 
             for (let i = 0; i < BRICK_COL_COUNT; i++) {

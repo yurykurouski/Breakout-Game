@@ -1,4 +1,4 @@
-// import ball from "./objects/ball.js";
+import ball from "./objects/ball.js";
 
 import storageService from "../storage-service.js";
 
@@ -10,7 +10,7 @@ export const drawBall = function () {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     
-    const ball = JSON.parse(storageService.get('ball'));
+    // const ball = JSON.parse(storageService.get('ball'));
         
     ctx.beginPath();
     ctx.arc(ball.posX, ball.posY, ball.radius, 0, Math.PI * 2);

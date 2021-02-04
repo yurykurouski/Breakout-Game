@@ -5,6 +5,7 @@ import game from './game.js';
 import { showBanner } from './utils.js';
 
 import { INITIAL_ZERO_RECORD } from './constants.js';
+import paddle from './canvas/objects/paddle.js';
 
 
 
@@ -28,13 +29,6 @@ function runGame(event) {
     //изменяем урл и отрисовываем главную страницу данной функцией
     navigateToUrl(`/main`);
 
-
-    // const greetingBanner = document.querySelector('.banner.banner-greeting');
-    // greetingBanner.innerHTML = `Hello, ${game.currentPlayer}`
-    // const nameSpan = document.querySelector('.payer_name');
-    // nameSpan.innerHTML = `Name: ${game.currentPlayer}`
-
-    
     event.target.reset();
 }
 

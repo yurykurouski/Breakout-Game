@@ -6,15 +6,12 @@ class Paddle {
         this.posY = 430;
         this.width = 80;
         this.height = 10;
-        this.speedY = 8;
-        this.speedX = 0;
+        this.speed = 8;
+        this.dX = 0;
     }
 
     drawPaddle() {
-        const thisInterval = setInterval(() => {
-        if (document.getElementById("canvas") != null) {
-
-            const canvas = document.getElementById('canvas');
+        const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
 
             // const paddle = JSON.parse(storageService.get('paddle'))
@@ -22,12 +19,25 @@ class Paddle {
             ctx.rect(this.posX, this.posY, this.width, this.height);
             ctx.fillStyle = '#444444';
             ctx.fill();
-            ctx.closePath();
+        ctx.closePath();
         
-            clearInterval(thisInterval)
-        }
+    //     const thisInterval = setInterval(() => {
+    //     if (document.getElementById("canvas") != null) {
 
-    }, 300);
+    //         const canvas = document.getElementById('canvas');
+    //         const ctx = canvas.getContext('2d');
+
+    //         // const paddle = JSON.parse(storageService.get('paddle'))
+    //         ctx.beginPath();
+    //         ctx.rect(this.posX, this.posY, this.width, this.height);
+    //         ctx.fillStyle = '#444444';
+    //         ctx.fill();
+    //         ctx.closePath();
+        
+    //         clearInterval(thisInterval)
+    //     }
+
+    // }, 300);
     }
 }
 

@@ -1,9 +1,11 @@
 import drawFieldsObjects from '../canvas/canvas.js';
-import movePaddle from '../canvas/operators/move-paddle.js';
+import {movePaddle, startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
 import mainTemplate from '../templates/pages/main-page.js';
 import { showBanner } from '../utils.js';
 import game from '../game.js';
 import storageService from '../storage-service.js';
+import paddle from '../canvas/objects/paddle.js';
+import clearCanvas from '../canvas/clear-canvas.js';
 
 
 function renderMainPage() {
@@ -27,12 +29,16 @@ function renderMainPage() {
 
         movePaddle();
 
-        drawFieldsObjects();  
+        drawFieldsObjects(); 
         
-        // requestAnimationFrame(updateCanvas);
+        requestAnimationFrame(updateCanvas);
     }
 
     updateCanvas();
+
+    //ивенты на управление платформой
+    document.addEventListener('keydown', startMovingPaddle);
+    document.addEventListener('keyup', stopMovingPaddle);
 }
 
 export default renderMainPage;

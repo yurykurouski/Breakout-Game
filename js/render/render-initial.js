@@ -9,6 +9,8 @@ function renderInitialPage() {
     const container = document.getElementById('container');
     container.innerHTML = startTemplate;
 
+
+
     //обработчики собыйти на кнопки открыть/закрыть правила
     const rulesBtn = document.getElementById('rules-btn');
     const rulesCloseBtn = document.getElementById('close-rules-btn');

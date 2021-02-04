@@ -1,7 +1,7 @@
 import { playAudio } from './audio/audio.js';
 import {navigateToUrl} from './routing.js';
 import storageService from './storage-service.js';
-import userList from './users.js';
+import game from './game.js';
 import { showBanner } from './utils.js';
 
 import { INITIAL_ZERO_RECORD } from './constants.js';
@@ -22,23 +22,17 @@ function runGame(event) {
         return
     }
 
-    const newPlayer = {
-        userName: userName,
-        record: INITIAL_ZERO_RECORD,
-    }
-
-
-    userList.add(newPlayer);
+    game.setCurrentUser(userName);
+    storageService.set('game', JSON.stringify(game))
 
     //изменяем урл и отрисовываем главную страницу данной функцией
     navigateToUrl(`/main`);
 
 
-
     const greetingBanner = document.querySelector('.banner.banner-greeting');
-    greetingBanner.innerHTML = `Hello, ${newPlayer.userName}`
+    greetingBanner.innerHTML = `Hello, ${game.currentPlayer}`
 
-     storageService.set('users', JSON.stringify(userList.users))
+    
     event.target.reset();
 }
 

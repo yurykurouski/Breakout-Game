@@ -11,6 +11,10 @@ class Brick {
         this.visible = true;
     }
 
+    setHidden() {
+        this.visible = false;
+    }
+
     drawBricks() {
         const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
@@ -27,6 +31,8 @@ class Brick {
                     bricks[i][j] = {  ...this, x, y }
                 }
             }
+        
+        
 
             bricks.forEach(column => {
                 column.forEach(brick => {
@@ -38,44 +44,13 @@ class Brick {
                 })
             });
         
-    //     const thisInterval = setInterval(() => {
-    //     if (document.getElementById("canvas") != null) {
-
-    //         const canvas = document.getElementById('canvas');
-    //         const ctx = canvas.getContext('2d');
-
-    //         // const brickInfo = JSON.parse(storageService.get('brickInfo'))
-    //         const bricks = [];
-
-    //         for (let i = 0; i < BRICK_COL_COUNT; i++) {
-    //             bricks[i] = [];
-    //             for (let j = 0; j < BRICK_ROW_COUNT; j++) {
-    //                 const x = i * (this.width + this.padding) + this.offsetX;
-    //                 const y = j * (this.height + this.padding) + this.offsetY;
-
-    //                 bricks[i][j] = {  ...this, x, y }
-    //             }
-    //         }
-
-    //         bricks.forEach(column => {
-    //             column.forEach(brick => {
-    //                 ctx.beginPath();
-    //                 ctx.rect(brick.x, brick.y, brick.width, brick.height);
-    //                 ctx.fillStyle = brick.visible ? '#444444' : 'transparent';
-    //                 ctx.fill();
-    //                 ctx.closePath();
-    //             })
-    //         });
-
-    //         clearInterval(thisInterval)
-
-    //     }
-    // }, 500);
+        storageService.set('allBricks', JSON.stringify(bricks))
+        
     }
 }
 
 const bricks = new Brick();
 
-storageService.set('bricks', JSON.stringify(bricks))
+// storageService.set('bricks', JSON.stringify(bricks))
 
 export default bricks;

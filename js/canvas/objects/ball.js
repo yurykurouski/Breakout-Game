@@ -5,8 +5,8 @@ class Ball {
         this.posX = 300;
         this.posY = 225;
         this.radius = 10;
-        this.speedX = 4;
-        this.speedY = -4;
+        this.dX = 4;
+        this.dY = -4;
     }
 
     drawBall() {

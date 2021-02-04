@@ -6,6 +6,8 @@ import game from '../game.js';
 import storageService from '../storage-service.js';
 import paddle from '../canvas/objects/paddle.js';
 import clearCanvas from '../canvas/clear-canvas.js';
+import { moveBall } from '../canvas/operators/move-ball.js';
+import bricks from '../canvas/objects/brick.js';
 
 
 function renderMainPage() {
@@ -22,12 +24,12 @@ function renderMainPage() {
     // const greetingBanner = document.querySelector('.banner.banner-greeting');
     setTimeout(() => { showBanner(greetingBanner) }, 500);
     
-    
 
     //update canvas and animation
     function updateCanvas() {
 
         movePaddle();
+        moveBall();
 
         drawFieldsObjects(); 
         

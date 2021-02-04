@@ -1,5 +1,7 @@
 import { playAudio } from '../audio/audio.js';
+import game from '../game.js';
 import runGame from '../run-game.js';
+import storageService from '../storage-service.js';
 import startTemplate from '../templates/pages/initial-page.js';
 import { toggleDisabled, changeColorMode } from '../utils.js';
 
@@ -8,6 +10,9 @@ import { toggleDisabled, changeColorMode } from '../utils.js';
 function renderInitialPage() {
     const container = document.getElementById('container');
     container.innerHTML = startTemplate;
+
+    game.currentPlayer = null;
+    storageService.set('game', JSON.stringify(game))
 
 
 

@@ -138,7 +138,8 @@ button {
   background-color: white;
   display: block;
   border-radius: 5px; }
-.container .score {
+.container .score,
+.container .payer_name {
   font-size: 2rem;
   font-weight: bold; }
 

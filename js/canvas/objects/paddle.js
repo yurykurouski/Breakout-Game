@@ -9,6 +9,26 @@ class Paddle {
         this.speedY = 8;
         this.speedX = 0;
     }
+
+    drawPaddle() {
+        const thisInterval = setInterval(() => {
+        if (document.getElementById("canvas") != null) {
+
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // const paddle = JSON.parse(storageService.get('paddle'))
+            ctx.beginPath();
+            ctx.rect(this.posX, this.posY, this.width, this.height);
+            ctx.fillStyle = '#444444';
+            ctx.fill();
+            ctx.closePath();
+        
+            clearInterval(thisInterval)
+        }
+
+    }, 300);
+    }
 }
 
 const paddle = new Paddle();

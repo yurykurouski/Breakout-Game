@@ -29,8 +29,10 @@ function runGame(event) {
     navigateToUrl(`/main`);
 
 
-    const greetingBanner = document.querySelector('.banner.banner-greeting');
-    greetingBanner.innerHTML = `Hello, ${game.currentPlayer}`
+    // const greetingBanner = document.querySelector('.banner.banner-greeting');
+    // greetingBanner.innerHTML = `Hello, ${game.currentPlayer}`
+    // const nameSpan = document.querySelector('.payer_name');
+    // nameSpan.innerHTML = `Name: ${game.currentPlayer}`
 
     
     event.target.reset();

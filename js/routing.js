@@ -1,6 +1,7 @@
 import renderInitialPage from './render/render-initial.js';
 import renderMainPage from './render/render-main.js';
 import { playAudio } from './audio/audio.js';
+import game from './game.js';
 
 
 const INDEX_URL = ['/', '/index.html'];
@@ -16,8 +17,8 @@ export function renderPage() {
         return
     }
 
-    
-    if (MAIN_URL.includes(currentUrl)) {
+
+    if ( MAIN_URL.includes(currentUrl)) {
         renderMainPage();
         playAudio(window);
         return

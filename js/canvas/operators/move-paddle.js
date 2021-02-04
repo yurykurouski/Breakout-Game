@@ -1,3 +1,4 @@
+import storageService from "../../storage-service.js";
 import paddle from "../objects/paddle.js";
 
 export function movePaddle() {
@@ -14,14 +15,22 @@ export function movePaddle() {
     if (paddle.posX < 0) {
         paddle.posX = 0;
     }
+
+    storageService.set('paddle', JSON.stringify(paddle));
 }
 
 
 //keyDown event
 export function startMovingPaddle(e) {
-    if (e.key === 'Right' || e.key === 'ArrowRight') {
+    if (e.key === 'Right' ||
+        e.key === 'ArrowRight')
+    {
         paddle.dX = paddle.speed;
-    } else if (e.key === 'Left' || e.key === 'ArrowLeft') {
+
+    } else if (
+        e.key === 'Left' ||
+        e.key === 'ArrowLeft')
+    {
         paddle.dX = -paddle.speed;
     }
 }
@@ -32,7 +41,8 @@ export function stopMovingPaddle(e) {
         e.key === 'Right' ||
         e.key === 'ArrowRight' ||
         e.key === 'Left' ||
-        e.key === 'ArrowLeft') {
+        e.key === 'ArrowLeft')
+    {
         paddle.dX = 0;
     }
 }

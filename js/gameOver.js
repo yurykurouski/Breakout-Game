@@ -6,10 +6,12 @@ import paddle from "./canvas/objects/paddle.js";
 
 import storageService from "./storage-service.js";
 import { renderScore, toogleGameHandlers } from "./utils.js";
+import { gameOverSound } from "./audio/audio.js";
 
 
 //работает когда мяч падает мимо платформы и когда нажимаем на кнопку рестарт
 export function gameOver() {
+    gameOverSound();
     toogleGameHandlers();
 
     game.resetScore();

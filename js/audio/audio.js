@@ -50,3 +50,9 @@ export function paddleMove() {
     myAudio.src = "../audio-files/paddle-move.mp3";
     myAudio.play();
 }
+
+export function gameOverSound() {
+    const myAudio = new Audio;
+    myAudio.src = "../audio-files/game-over.mp3";
+    myAudio.play();
+}

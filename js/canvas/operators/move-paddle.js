@@ -1,3 +1,4 @@
+import { paddleMove } from "../../audio/audio.js";
 import storageService from "../../storage-service.js";
 import paddle from "../objects/paddle.js";
 
@@ -26,12 +27,14 @@ export function startMovingPaddle(e) {
         e.key === 'ArrowRight')
     {
         paddle.dX = paddle.speed;
+        paddleMove();
 
     } else if (
         e.key === 'Left' ||
         e.key === 'ArrowLeft')
     {
         paddle.dX = -paddle.speed;
+        paddleMove();
     }
 }
 

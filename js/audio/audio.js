@@ -34,4 +34,19 @@ export function playAudio(btn) {
         myAudio.src = "../audio-files/popstate.mp3";
         myAudio.play();
     }
+
+}
+
+export function brickBreakSound() {
+    
+    const myAudio = new Audio;
+    myAudio.src = "../audio-files/brick-broken.mp3";
+    myAudio.play();
+}
+
+export function paddleMove() {
+    
+    const myAudio = new Audio;
+    myAudio.src = "../audio-files/paddle-move.mp3";
+    myAudio.play();
 }

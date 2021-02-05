@@ -1,7 +1,8 @@
-import storageService from "../../storage-service.js";
 import ball from "../objects/ball.js";
 import bricks from "../objects/brick.js";
 import paddle from "../objects/paddle.js";
+import storageService from "../../storage-service.js";
+import { brickBreakSound } from "../../audio/audio.js";
 
 export function moveBall() {
     ball.posX += ball.dX;
@@ -40,24 +41,24 @@ export function moveBall() {
     //попадание в блоки
     if (arrayOfBricks) {
         arrayOfBricks.forEach(column => {
-                column.forEach(item => {
-                    if (item.visible) {
-                        if (
-                            //левая и правая стороны каждого блок
-                            ball.posX - ball.radius > item.x &&
-                            ball.posX + ball.radius < item.x + item.width &&
-                            //верх и низ каждого блока
-                            ball.posY + ball.radius > item.y &&
-                            ball.posY - ball.radius < item.y + item.height
-                        ) {
-                            ball.dY *= -1;
-                            bricks.setHidden(item);
-                            storageService.set('arrayOfBricks', JSON.stringify(arrayOfBricks))
-                        }
+            column.forEach(item => {
+                if (item.visible) {
+                    if (
+                        //левая и правая стороны каждого блок
+                        ball.posX - ball.radius > item.x &&
+                        ball.posX + ball.radius < item.x + item.width &&
+                        //верх и низ каждого блока
+                        ball.posY + ball.radius > item.y &&
+                        ball.posY - ball.radius < item.y + item.height
+                    ) {
+                        ball.dY *= -1;
+                        bricks.setHidden(item);
+                        brickBreakSound();
+                        storageService.set('arrayOfBricks', JSON.stringify(arrayOfBricks))
                     }
-                })
-                
-            });
+                }
+            })
+        });
     }
     
 

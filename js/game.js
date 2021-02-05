@@ -19,6 +19,10 @@ class Game {
         this.score += 1;
     }
 
+    resetScore() {
+        this.score = 0;
+    }
+
     startGame() {
         this.started = true;
     }

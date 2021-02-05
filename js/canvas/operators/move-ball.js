@@ -66,6 +66,17 @@ export function moveBall() {
             })
         });
     }
+
+    //если падает мимо платформы на нижнюю грань
+    if (ball.posY + ball.radius > canvas.height) {
+        game.resetScore();
+        storageService.set('game', JSON.stringify(game))
+        renderScore();
+        bricks.showAllBricks();
+
+        ball.setInitialPos();
+        
+    }
     
 
     storageService.set('ball', JSON.stringify(ball));

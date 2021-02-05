@@ -1,9 +1,12 @@
-import storageService from '../../storage-service.js'
+import storageService from '../../storage-service.js';
+
+const INITIAL_BALL_POS_X = 300;
+const INITIAL_BALL_POS_Y = 400;
 
 class Ball {
     constructor() {
-        this.posX = 300;
-        this.posY = 225;
+        this.posX = INITIAL_BALL_POS_X;
+        this.posY = INITIAL_BALL_POS_Y;
         this.radius = 10;
         this.dX = 4;
         this.dY = -4;
@@ -20,6 +23,10 @@ class Ball {
         ctx.closePath();
     }
 
+    setInitialPos() {
+        this.posX = INITIAL_BALL_POS_X;
+        this.posY = INITIAL_BALL_POS_Y;
+    }
 }
 
 const ball = new Ball();

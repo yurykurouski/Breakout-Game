@@ -22,6 +22,18 @@ class Brick {
             storageService.set('arrayOfBricks', JSON.stringify(null))
         }
     }
+
+
+    showAllBricks() {
+        let arrOfBricks = JSON.parse(storageService.get('arrayOfBricks'));
+
+        arrOfBricks.forEach(column => {
+            column.forEach(item => item.visible = true);
+        });
+
+        storageService.set('arrayOfBricks', JSON.stringify(arrOfBricks))
+    }
+
     
     reRender(arrOfBricks) {
         const canvas = document.getElementById('canvas');

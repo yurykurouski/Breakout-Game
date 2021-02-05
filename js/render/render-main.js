@@ -1,13 +1,8 @@
-import drawFieldsObjects from '../canvas/canvas.js';
-import {movePaddle, startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
-import mainTemplate from '../templates/pages/main-page.js';
 import { showBanner } from '../utils.js';
-import game from '../game.js';
+import updateCanvas from './update-canvas.js';
 import storageService from '../storage-service.js';
-import paddle from '../canvas/objects/paddle.js';
-import clearCanvas from '../canvas/clear-canvas.js';
-import { moveBall } from '../canvas/operators/move-ball.js';
-import bricks from '../canvas/objects/brick.js';
+import mainTemplate from '../templates/pages/main-page.js';
+import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
 
 
 function renderMainPage() {
@@ -26,18 +21,9 @@ function renderMainPage() {
     
 
     //update canvas and animation
-    function updateCanvas() {
+    updateCanvas()
 
-        movePaddle();
-        moveBall();
-
-        drawFieldsObjects(); 
-        
-        requestAnimationFrame(updateCanvas);
-    }
-
-    updateCanvas();
-
+    
     //ивенты на управление платформой
     document.addEventListener('keydown', startMovingPaddle);
     document.addEventListener('keyup', stopMovingPaddle);

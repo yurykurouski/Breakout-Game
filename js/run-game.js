@@ -1,12 +1,8 @@
-import { playAudio } from './audio/audio.js';
-import {navigateToUrl} from './routing.js';
-import storageService from './storage-service.js';
 import game from './game.js';
 import { showBanner } from './utils.js';
-
-import { INITIAL_ZERO_RECORD } from './constants.js';
-import paddle from './canvas/objects/paddle.js';
-
+import { navigateToUrl } from './routing.js';
+import { playAudio } from './audio/audio.js';
+import storageService from './storage-service.js';
 
 
 function runGame(event) {

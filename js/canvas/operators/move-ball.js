@@ -1,10 +1,11 @@
+import game from "../../game.js";
 import ball from "../objects/ball.js";
 import bricks from "../objects/brick.js";
 import paddle from "../objects/paddle.js";
+import { renderScore } from '../../utils.js'
 import storageService from "../../storage-service.js";
 import { brickBreakSound } from "../../audio/audio.js";
-import game from "../../game.js";
-import { renderScore } from '../../utils.js'
+
 
 export function moveBall() {
     ball.posX += ball.dX;

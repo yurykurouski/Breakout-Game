@@ -66,6 +66,4 @@ class Brick {
 
 const bricks = new Brick();
 
-// storageService.set('bricks', JSON.stringify(bricks))
-
 export default bricks;

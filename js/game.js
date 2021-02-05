@@ -1,5 +1,3 @@
-import storageService from "./storage-service.js";
-
 class Game {
     constructor() {
         this.started = false;
@@ -30,8 +28,7 @@ class Game {
     }
 }
 
-// const users = JSON.parse(storageService.get('users'))
 
-const game = new Game(); // =[]
+const game = new Game();
 
 export default game;

@@ -1,6 +1,7 @@
+import paddle from "../objects/paddle.js";
 import { paddleMove } from "../../audio/audio.js";
 import storageService from "../../storage-service.js";
-import paddle from "../objects/paddle.js";
+
 
 export function movePaddle() {
     paddle.posX += paddle.dX;

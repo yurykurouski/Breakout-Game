@@ -17,8 +17,8 @@ class Game {
         this.currentPlayer = null;
     }
 
-    setScore(score) {
-        this.score = score;
+    increaseScore() {
+        this.score += 1;
     }
 
     startGame() {

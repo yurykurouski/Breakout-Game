@@ -3,6 +3,8 @@ import bricks from "../objects/brick.js";
 import paddle from "../objects/paddle.js";
 import storageService from "../../storage-service.js";
 import { brickBreakSound } from "../../audio/audio.js";
+import game from "../../game.js";
+import { renderScore } from '../../utils.js'
 
 export function moveBall() {
     ball.posX += ball.dX;
@@ -54,7 +56,10 @@ export function moveBall() {
                         ball.dY *= -1;
                         bricks.setHidden(item);
                         brickBreakSound();
+                        game.increaseScore();
+                        storageService.set('game', JSON.stringify(game))
                         storageService.set('arrayOfBricks', JSON.stringify(arrayOfBricks))
+                        renderScore();
                     }
                 }
             })
@@ -64,3 +69,5 @@ export function moveBall() {
 
     storageService.set('ball', JSON.stringify(ball));
 }
+
+

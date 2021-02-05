@@ -13,7 +13,7 @@ function drawFieldsObjects() {
     ball.drawBall();
     paddle.drawPaddle();
     bricks.drawBricks();
-    drawScore();
+    // drawScore();
 }
 
 

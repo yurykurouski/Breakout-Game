@@ -95,6 +95,7 @@ function gameOver() {
     game.resetScore();
     game.endGame();
     game.resumeGame();
+    paddle.setInitialPaddlePos();
 
     storageService.set('ball', JSON.stringify(ball))
     storageService.set('game', JSON.stringify(game))

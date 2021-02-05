@@ -79,7 +79,6 @@ function startGame() {
     toggleDisabled(startGameBtn);
 
     game.startGame();
-    paddle.setInitialPaddlePos();
 
     storageService.set('game', JSON.stringify(game))
 }

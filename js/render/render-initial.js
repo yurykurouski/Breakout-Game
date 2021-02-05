@@ -1,4 +1,5 @@
 import { playAudio } from '../audio/audio.js';
+import bricks from '../canvas/objects/brick.js';
 import game from '../game.js';
 import runGame from '../run-game.js';
 import storageService from '../storage-service.js';
@@ -13,6 +14,8 @@ function renderInitialPage() {
 
     game.currentPlayer = null;
     storageService.set('game', JSON.stringify(game))
+
+    bricks.clearField();
 
 
 

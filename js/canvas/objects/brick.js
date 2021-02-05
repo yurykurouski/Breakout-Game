@@ -11,16 +11,39 @@ class Brick {
         this.visible = true;
     }
 
-    setHidden() {
-        this.visible = false;
+    setHidden(brick) {
+        brick.visible = false;
+    }
+
+    clearField() {
+        let bricks = JSON.parse(storageService.get('arrayOfBricks'));
+
+        if (bricks) {
+            storageService.set('arrayOfBricks', JSON.stringify(null))
+        }
+    }
+    
+    reRender(arrOfBricks) {
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        arrOfBricks.forEach(column => {
+            column.forEach(brick => {
+                ctx.beginPath();
+                ctx.rect(brick.x, brick.y, brick.width, brick.height);
+                ctx.fillStyle = brick.visible ? '#444444' : 'transparent';
+                ctx.fill();
+                ctx.closePath();
+            })
+        });
+        
+        storageService.set('arrayOfBricks', JSON.stringify(arrOfBricks))
     }
 
     drawBricks() {
-        const canvas = document.getElementById('canvas');
-            const ctx = canvas.getContext('2d');
+        let bricks = JSON.parse(storageService.get('arrayOfBricks'));
 
-            // const brickInfo = JSON.parse(storageService.get('brickInfo'))
-            const bricks = [];
+        if (!bricks) {
+            bricks = [];
 
             for (let i = 0; i < BRICK_COL_COUNT; i++) {
                 bricks[i] = [];
@@ -31,20 +54,12 @@ class Brick {
                     bricks[i][j] = {  ...this, x, y }
                 }
             }
-        
-        
 
-            bricks.forEach(column => {
-                column.forEach(brick => {
-                    ctx.beginPath();
-                    ctx.rect(brick.x, brick.y, brick.width, brick.height);
-                    ctx.fillStyle = brick.visible ? '#444444' : 'transparent';
-                    ctx.fill();
-                    ctx.closePath();
-                })
-            });
-        
-        storageService.set('allBricks', JSON.stringify(bricks))
+            this.reRender(bricks)
+        }
+        else {
+            this.reRender(bricks)
+        }
         
     }
 }

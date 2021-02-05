@@ -35,29 +35,31 @@ export function moveBall() {
         ball.dY *= -1;
     }
 
-    // const allBricks = JSON.parse(storageService.get('allBricks'))
-    // //попадание в блоки
-    // allBricks.forEach((column) => {
-    //     column.forEach((brick) => {
-    //         if (brick.visible) {
-    //             console.log(ball.posX - ball.radius > brick.posX)
-    //             if (
-                    
-    //                 //левая и правая стороны каждого блок
-    //                 ball.posX - ball.radius > brick.posX ||
-    //                 ball.posX + ball.radius < brick.posX + brick.width ||
-    //                 //верх и низ каждого блока
-    //                 ball.posY + ball.radius > brick.posY ||
-    //                 ball.posY - ball.radius < brick.posY + brick.height
-    //             ) {
-    //                 ball.dY *= -1;
-    //                 // brick.visible = false;
-    //                 // brick.setHidden();
-    //             }
-    //         }
-    //     })
-        
-    // });
+    const arrayOfBricks = JSON.parse(storageService.get('arrayOfBricks'))
+
+    //попадание в блоки
+    if (arrayOfBricks) {
+        arrayOfBricks.forEach(column => {
+                column.forEach(item => {
+                    if (item.visible) {
+                        if (
+                            //левая и правая стороны каждого блок
+                            ball.posX - ball.radius > item.x &&
+                            ball.posX + ball.radius < item.x + item.width &&
+                            //верх и низ каждого блока
+                            ball.posY + ball.radius > item.y &&
+                            ball.posY - ball.radius < item.y + item.height
+                        ) {
+                            ball.dY *= -1;
+                            bricks.setHidden(item);
+                            storageService.set('arrayOfBricks', JSON.stringify(arrayOfBricks))
+                        }
+                    }
+                })
+                
+            });
+    }
+    
 
     storageService.set('ball', JSON.stringify(ball));
 }

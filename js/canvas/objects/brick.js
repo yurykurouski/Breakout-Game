@@ -40,6 +40,11 @@ arrOfBricks.forEach(column => {
     
     reRender(arrOfBricks) {
         const canvas = document.getElementById('canvas');
+
+        if (!canvas) {
+            return
+        }
+
         const ctx = canvas.getContext('2d');
         arrOfBricks.forEach(column => {
             column.forEach(brick => {

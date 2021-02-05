@@ -18,6 +18,9 @@ export function moveBall() {
 
     const canvas = document.querySelector('canvas');
 
+    if (!canvas) {
+        return
+    }
 
     //левая и правая стенка
     if (

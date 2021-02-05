@@ -12,6 +12,10 @@ class Paddle {
 
     drawPaddle() {
         const canvas = document.getElementById('canvas');
+
+        if (!canvas) {
+        return
+        }
             const ctx = canvas.getContext('2d');
 
             // const paddle = JSON.parse(storageService.get('paddle'))

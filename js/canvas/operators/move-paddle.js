@@ -9,6 +9,10 @@ export function movePaddle() {
 
     const canvas = document.querySelector('canvas');
 
+    if (!canvas) {
+        return
+    }
+
     //wall right
     if (paddle.posX + paddle.width > canvas.width) {
         paddle.posX = canvas.width - paddle.width;

@@ -16,7 +16,13 @@ class Ball {
 
     drawBall() {
         const canvas = document.getElementById('canvas');
+        if (!canvas) {
+                return
+                }
+
         const ctx = canvas.getContext('2d');
+
+        
 
         ctx.beginPath();
         ctx.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2);

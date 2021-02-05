@@ -20,24 +20,12 @@ class Paddle {
             ctx.fillStyle = '#444444';
             ctx.fill();
         ctx.closePath();
-        
-    //     const thisInterval = setInterval(() => {
-    //     if (document.getElementById("canvas") != null) {
+    }
 
-    //         const canvas = document.getElementById('canvas');
-    //         const ctx = canvas.getContext('2d');
 
-    //         // const paddle = JSON.parse(storageService.get('paddle'))
-    //         ctx.beginPath();
-    //         ctx.rect(this.posX, this.posY, this.width, this.height);
-    //         ctx.fillStyle = '#444444';
-    //         ctx.fill();
-    //         ctx.closePath();
-        
-    //         clearInterval(thisInterval)
-    //     }
-
-    // }, 300);
+    setInitialPaddlePos() {
+        this.posX = 260;
+        this.posY = 430;
     }
 }
 

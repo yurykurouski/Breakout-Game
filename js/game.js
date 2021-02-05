@@ -4,6 +4,15 @@ class Game {
         this.currentPlayer = null;
         this.score = 0;
         this.gameOver = false;
+        this.paused = false;
+    }
+
+    pausegame() {
+        this.paused = true;
+    }
+
+    resumeGame() {
+        this.paused = false;
     }
 
 
@@ -24,10 +33,13 @@ class Game {
     }
 
     startGame() {
+        this.paused = false;
         this.started = true;
+        this.gameOver = false;
     }
 
     endGame() {
+        this.started = false;
         this.gameOver = true;
     }
 }

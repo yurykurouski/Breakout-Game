@@ -2,15 +2,18 @@ import game from "../../game.js";
 import ball from "../objects/ball.js";
 import bricks from "../objects/brick.js";
 import paddle from "../objects/paddle.js";
-import { renderScore } from '../../utils.js'
+import { renderScore, toggleDisabled } from '../../utils.js'
 import storageService from "../../storage-service.js";
 import { brickBreakSound } from "../../audio/audio.js";
 import { BRICK_COL_COUNT, BRICK_ROW_COUNT } from "../../constants.js";
 
 
 export function moveBall() {
-    ball.posX += ball.dX;
-    ball.posY += ball.dY;
+    if (game.started) {
+        ball.posX += ball.dX;
+        ball.posY += ball.dY;
+    }
+    
 
     const canvas = document.querySelector('canvas');
 
@@ -84,7 +87,16 @@ export function moveBall() {
 
 
 function gameOver() {
+    const pauseBtn = document.getElementById('pause-game-btn');
+    toggleDisabled(pauseBtn);
+    const startGameBtn = document.getElementById('start-game-btn');
+    toggleDisabled(startGameBtn);
+
     game.resetScore();
+    game.endGame();
+    game.resumeGame();
+
+    storageService.set('ball', JSON.stringify(ball))
     storageService.set('game', JSON.stringify(game))
     renderScore();
     bricks.showAllBricks();

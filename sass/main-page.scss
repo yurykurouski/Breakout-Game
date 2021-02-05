@@ -15,4 +15,16 @@
     font-size: 2rem;
     font-weight: bold;
   }
+
+  #pause-game-btn,
+  #start-game-btn {
+    &:disabled {
+      background-color: $light;
+      opacity: 0.5;
+
+      &:hover {
+        transition: none;
+      }
+    }
+  }
 }

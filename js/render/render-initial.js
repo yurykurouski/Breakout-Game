@@ -12,7 +12,7 @@ function renderInitialPage() {
     const container = document.getElementById('container');
     container.innerHTML = startTemplate;
 
-    game.currentPlayer = null;
+    game.deleteCurrentUser();
     storageService.set('game', JSON.stringify(game))
 
     bricks.clearField();
@@ -51,6 +51,10 @@ function renderInitialPage() {
     //запускаем игру
     const userNameForm = document.getElementById('run-game-form');
     userNameForm.addEventListener('submit', runGame);
+
+
+    //обработчик событий на включение музыки
+ 
 }
 
 export default renderInitialPage;

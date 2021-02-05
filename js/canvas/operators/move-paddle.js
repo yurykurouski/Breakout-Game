@@ -1,6 +1,7 @@
 import paddle from "../objects/paddle.js";
 import { paddleMove } from "../../audio/audio.js";
 import storageService from "../../storage-service.js";
+import game from "../../game.js";
 
 
 export function movePaddle() {
@@ -24,19 +25,22 @@ export function movePaddle() {
 
 //keyDown event
 export function startMovingPaddle(e) {
-    if (e.key === 'Right' ||
-        e.key === 'ArrowRight')
-    {
-        paddle.dX = paddle.speed;
-        paddleMove();
+    if (game.started && !game.paused) {
+        if (e.key === 'Right' ||
+            e.key === 'ArrowRight')
+        {
+            paddle.dX = paddle.speed;
+            paddleMove();
 
-    } else if (
-        e.key === 'Left' ||
-        e.key === 'ArrowLeft')
-    {
-        paddle.dX = -paddle.speed;
-        paddleMove();
+        } else if (
+            e.key === 'Left' ||
+            e.key === 'ArrowLeft')
+        {
+            paddle.dX = -paddle.speed;
+            paddleMove();
+        }
     }
+    
 }
 
     //keyUp event

@@ -10,6 +10,7 @@ const mainTemplate =
 
 <canvas id="canvas" width="600px" height="450px"></canvas>
 <button id="pause-game-btn">Pause</button>
+<button id="start-game-btn" disabled>Start</button>
 `
 
 export default mainTemplate;

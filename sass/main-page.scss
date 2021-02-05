@@ -8,6 +8,7 @@
     background-color: white;
     display: block;
     border-radius: 5px;
+    position: relative;
   }
 
   .score,
@@ -17,7 +18,10 @@
   }
 
   #pause-game-btn,
-  #start-game-btn {
+  #start-game-btn,
+  #restart-game-btn {
+    width: 200px;
+    margin: 20px;
     &:disabled {
       background-color: $light;
       opacity: 0.5;
@@ -26,5 +30,9 @@
         transition: none;
       }
     }
+  }
+
+  #restart-game-btn {
+    width: 70px;
   }
 }

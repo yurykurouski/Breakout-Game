@@ -121,7 +121,7 @@ button {
   font-style: italic;
   border: 4px solid #cccccc; }
   .container #run-game-btn:disabled {
-    background-color: red; }
+    background-color: #efefef; }
     .container #run-game-btn:disabled:hover {
       transition: none; }
   .container #run-game-btn:hover {
@@ -137,17 +137,27 @@ button {
 .container #canvas {
   background-color: white;
   display: block;
-  border-radius: 5px; }
+  border-radius: 5px;
+  position: relative; }
 .container .score,
 .container .payer_name {
   font-size: 2rem;
   font-weight: bold; }
-.container #pause-game-btn:disabled,
-.container #start-game-btn:disabled {
-  background-color: #efefef;
-  opacity: 0.5; }
-  .container #pause-game-btn:disabled:hover,
-  .container #start-game-btn:disabled:hover {
-    transition: none; }
+.container #pause-game-btn,
+.container #start-game-btn,
+.container #restart-game-btn {
+  width: 200px;
+  margin: 20px; }
+  .container #pause-game-btn:disabled,
+  .container #start-game-btn:disabled,
+  .container #restart-game-btn:disabled {
+    background-color: #efefef;
+    opacity: 0.5; }
+    .container #pause-game-btn:disabled:hover,
+    .container #start-game-btn:disabled:hover,
+    .container #restart-game-btn:disabled:hover {
+      transition: none; }
+.container #restart-game-btn {
+  width: 70px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,3 +23,10 @@ export function renderScore() {
     scoreSpan.innerHTML = `Score: ${game.score}`
 }
 
+
+export function toogleGameHandlers() {
+    const pauseBtn = document.getElementById('pause-game-btn');
+    const startGameBtn = document.getElementById('start-game-btn');
+    const restartGameBtn = document.getElementById('restart-game-btn');
+    toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
+}

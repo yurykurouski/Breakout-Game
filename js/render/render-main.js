@@ -1,4 +1,4 @@
-import { showBanner, toggleDisabled } from '../utils.js';
+import { renderScore, showBanner, toggleDisabled, toogleGameHandlers } from '../utils.js';
 import updateCanvas from './update-canvas.js';
 import storageService from '../storage-service.js';
 import mainTemplate from '../templates/pages/main-page.js';
@@ -6,6 +6,8 @@ import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-padd
 import ball from '../canvas/objects/ball.js';
 import game from '../game.js';
 import paddle from '../canvas/objects/paddle.js';
+import bricks from '../canvas/objects/brick.js';
+import { gameOver } from '../gameOver.js';
 
 
 function renderMainPage() {
@@ -15,9 +17,9 @@ function renderMainPage() {
     const game =  JSON.parse(storageService.get('game'));
 
     const greetingBanner = document.querySelector('.banner.banner-greeting');
-    greetingBanner.innerHTML = `Hello, ${game.currentPlayer}`
+    greetingBanner.innerHTML = `Hello, ${game.currentPlayer ? game.currentPlayer : "anonymous"}`
     const nameSpan = document.querySelector('.payer_name');
-    nameSpan.innerHTML = `Name: ${game.currentPlayer}`
+    nameSpan.innerHTML = `Name: ${game.currentPlayer ? game.currentPlayer : "anonymous"}`
 
     // const greetingBanner = document.querySelector('.banner.banner-greeting');
     setTimeout(() => { showBanner(greetingBanner) }, 500);
@@ -34,18 +36,19 @@ function renderMainPage() {
 
     //кнопка пауза
     const pauseBtn = document.getElementById('pause-game-btn');
-    const startGameBtn = document.getElementById('start-game-btn');
-
-    if (!game.started) {
-        toggleDisabled(pauseBtn);
-        toggleDisabled(startGameBtn);
-    }
-    
     pauseBtn.addEventListener('click', toogleBallSpeed);
 
     //кнопка старт
-    // const startGameBtn = document.getElementById('start-game-btn');
+    const startGameBtn = document.getElementById('start-game-btn');
     startGameBtn.addEventListener('click', startGame);
+
+    //кнопка рестарт
+    const restartGameBtn = document.getElementById('restart-game-btn');
+    restartGameBtn.addEventListener('click', gameOver);
+   
+    if (!game.started) {
+        toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
+    }
 
     
     
@@ -73,11 +76,9 @@ function toogleBallSpeed() {
 }
 
 function startGame() {
-    const pauseBtn = document.getElementById('pause-game-btn');
-    toggleDisabled(pauseBtn);
-    const startGameBtn = document.getElementById('start-game-btn');
-    toggleDisabled(startGameBtn);
+    toogleGameHandlers();
 
+    ball.setInitialBallSpeed();
     game.startGame();
 
     storageService.set('game', JSON.stringify(game))

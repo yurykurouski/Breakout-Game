@@ -85,7 +85,7 @@
     border: 4px solid $border-color;
 
     &:disabled {
-      background-color: red;
+      background-color: $light;
 
       &:hover {
         transition: none;

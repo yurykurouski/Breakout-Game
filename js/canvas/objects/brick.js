@@ -27,9 +27,12 @@ class Brick {
     showAllBricks() {
         let arrOfBricks = JSON.parse(storageService.get('arrayOfBricks'));
 
-        arrOfBricks.forEach(column => {
+        if (arrOfBricks) {
+arrOfBricks.forEach(column => {
             column.forEach(item => item.visible = true);
         });
+        }
+        
 
         storageService.set('arrayOfBricks', JSON.stringify(arrOfBricks))
     }

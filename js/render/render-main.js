@@ -3,6 +3,7 @@ import updateCanvas from './update-canvas.js';
 import storageService from '../storage-service.js';
 import mainTemplate from '../templates/pages/main-page.js';
 import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
+import ball from '../canvas/objects/ball.js';
 
 
 function renderMainPage() {
@@ -27,6 +28,26 @@ function renderMainPage() {
     //ивенты на управление платформой
     document.addEventListener('keydown', startMovingPaddle);
     document.addEventListener('keyup', stopMovingPaddle);
+
+    //кнопка пауза
+    const pauseBtn = document.getElementById('pause-game-btn');
+    pauseBtn.addEventListener('click', toogleBallSpeed);
 }
+
+function toogleBallSpeed() {
+
+    const pauseBtn = document.getElementById('pause-game-btn');
+
+    if (ball.dX && ball.dY ) {
+        ball.stopBall();
+        pauseBtn.innerHTML = 'Resume';
+        
+    } else {
+        ball.resumeBallSpeed();
+        pauseBtn.innerHTML = 'Pause'
+    }
+    
+}
+
 
 export default renderMainPage;

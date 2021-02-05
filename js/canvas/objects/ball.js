@@ -26,6 +26,21 @@ class Ball {
     setInitialPos() {
         this.posX = INITIAL_BALL_POS_X;
         this.posY = INITIAL_BALL_POS_Y;
+        storageService.set('ball', JSON.stringify(ball));
+    }
+
+    stopBall() {
+        this.tempDX = this.dX;
+        this.tempDY = this.dY;
+        this.dX = 0;
+        this.dY = 0;
+        storageService.set('ball', JSON.stringify(ball));
+    }
+
+    resumeBallSpeed() {
+        this.dX = this.tempDX;
+        this.dY = this.tempDY;
+        storageService.set('ball', JSON.stringify(ball));
     }
 }
 

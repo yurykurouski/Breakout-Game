@@ -9,7 +9,7 @@ const mainTemplate =
 <span class="score">Score: </span>
 
 <canvas id="canvas" width="600px" height="450px"></canvas>
-
+<button id="pause-game-btn">Pause</button>
 `
 
 export default mainTemplate;

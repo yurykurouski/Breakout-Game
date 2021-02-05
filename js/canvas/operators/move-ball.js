@@ -5,6 +5,7 @@ import paddle from "../objects/paddle.js";
 import { renderScore } from '../../utils.js'
 import storageService from "../../storage-service.js";
 import { brickBreakSound } from "../../audio/audio.js";
+import { BRICK_COL_COUNT, BRICK_ROW_COUNT } from "../../constants.js";
 
 
 export function moveBall() {
@@ -69,17 +70,26 @@ export function moveBall() {
 
     //если падает мимо платформы на нижнюю грань
     if (ball.posY + ball.radius > canvas.height) {
-        game.resetScore();
-        storageService.set('game', JSON.stringify(game))
-        renderScore();
-        bricks.showAllBricks();
+        gameOver();
+    }
 
-        ball.setInitialPos();
-        
+    //перерисовываем блоки когда разбиты все на экране
+    if (game.score % (BRICK_COL_COUNT * BRICK_ROW_COUNT) === 0) {
+        bricks.showAllBricks();
     }
     
 
     storageService.set('ball', JSON.stringify(ball));
+}
+
+
+function gameOver() {
+    game.resetScore();
+    storageService.set('game', JSON.stringify(game))
+    renderScore();
+    bricks.showAllBricks();
+
+    ball.setInitialPos();
 }
 
 

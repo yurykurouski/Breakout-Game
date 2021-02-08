@@ -1,30 +1,36 @@
-import { renderScore, showBanner, toggleDisabled, toogleGameHandlers } from '../utils.js';
+import { gameOver } from '../gameOver.js';
+import { playAudio } from '../audio/audio.js';
 import updateCanvas from './update-canvas.js';
 import storageService from '../storage-service.js';
+import renderInitialPage from './render-initial.js';
+import { showBanner, toggleDisabled } from '../utils.js';
+import startGame from '../canvas/operators/start-game.js';
 import mainTemplate from '../templates/pages/main-page.js';
+import toogleBallSpeed from '../canvas/operators/toogle-ball-speed.js';
 import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
-import ball from '../canvas/objects/ball.js';
-import game from '../game.js';
-import paddle from '../canvas/objects/paddle.js';
-import bricks from '../canvas/objects/brick.js';
-import { gameOver } from '../gameOver.js';
 
 
 function renderMainPage() {
+
+    const game = JSON.parse(storageService.get('game'));
+    
+    if (!game.currentPlayer) {
+        renderInitialPage();
+        return
+    }
+
     const container = document.getElementById('container');
     container.innerHTML = mainTemplate;
 
-    const game =  JSON.parse(storageService.get('game'));
-
     const greetingBanner = document.querySelector('.banner.banner-greeting');
     greetingBanner.innerHTML = `Hello, ${game.currentPlayer ? game.currentPlayer : "anonymous"}`
+
     const nameSpan = document.querySelector('.payer_name');
     nameSpan.innerHTML = `Name: ${game.currentPlayer ? game.currentPlayer : "anonymous"}`
 
     // const greetingBanner = document.querySelector('.banner.banner-greeting');
     setTimeout(() => { showBanner(greetingBanner) }, 500);
     
-
     //update canvas and animation
     updateCanvas()
 
@@ -50,39 +56,10 @@ function renderMainPage() {
         toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
     }
 
-    
-    
+    playAudio(window);
 }
 
-function toogleBallSpeed() {
 
-    const pauseBtn = document.getElementById('pause-game-btn');
-
-    if (ball.dX && ball.dY ) {
-        ball.stopBall();
-        game.pausegame();
-        storageService.set('game', JSON.stringify(game))
-
-        pauseBtn.innerHTML = 'Resume';
-        
-    } else {
-        ball.resumeBallSpeed();
-        game.resumeGame();
-        storageService.set('game', JSON.stringify(game))
-
-        pauseBtn.innerHTML = 'Pause'
-    }
-    
-}
-
-function startGame() {
-    toogleGameHandlers();
-
-    ball.setInitialBallSpeed();
-    game.startGame();
-
-    storageService.set('game', JSON.stringify(game))
-}
 
 
 export default renderMainPage;

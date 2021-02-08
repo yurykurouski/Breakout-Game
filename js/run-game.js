@@ -6,14 +6,15 @@ import storageService from './storage-service.js';
 
 
 function runGame(event) {
-    //запись имени игрока
     event.preventDefault();
+
     const formData = new FormData(event.target);
     const userName = formData.get('name');
 
     //выводим подсказку если не введено имя пользователя и нажат run
     if (!userName) {
         const errorBanner = document.querySelector('.banner');
+        
         playAudio();//eror sound
         showBanner(errorBanner);
         return

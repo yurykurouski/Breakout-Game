@@ -1,11 +1,10 @@
-import { playAudio } from '../audio/audio.js';
-import bricks from '../canvas/objects/brick.js';
 import game from '../game.js';
 import runGame from '../run-game.js';
+import { playAudio } from '../audio/audio.js';
+import bricks from '../canvas/objects/brick.js';
 import storageService from '../storage-service.js';
-import startTemplate from '../templates/pages/initial-page.js';
 import { toggleDisabled, changeColorMode } from '../utils.js';
-
+import startTemplate from '../templates/pages/initial-page.js';
 
 
 function renderInitialPage() {
@@ -16,8 +15,6 @@ function renderInitialPage() {
     storageService.set('game', JSON.stringify(game))
 
     bricks.clearField();
-
-
 
     //обработчики собыйти на кнопки открыть/закрыть правила
     const rulesBtn = document.getElementById('rules-btn');
@@ -54,7 +51,7 @@ function renderInitialPage() {
 
 
     //обработчик событий на включение музыки
- 
+    playAudio(window);
 }
 
 export default renderInitialPage;

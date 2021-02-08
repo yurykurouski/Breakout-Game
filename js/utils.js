@@ -14,12 +14,14 @@ export function toggleDisabled() {
 
 export function changeColorMode() {
     const body = document.querySelector('body');
+
     body.classList.toggle('night-mode');
 }
 
 export function renderScore() {
     const game = JSON.parse(storageService.get('game'));
     const scoreSpan = document.querySelector('.score');
+
     scoreSpan.innerHTML = `Score: ${game.score}`
 }
 
@@ -28,5 +30,6 @@ export function toogleGameHandlers() {
     const pauseBtn = document.getElementById('pause-game-btn');
     const startGameBtn = document.getElementById('start-game-btn');
     const restartGameBtn = document.getElementById('restart-game-btn');
+    
     toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
 }

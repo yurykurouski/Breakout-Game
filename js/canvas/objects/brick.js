@@ -1,13 +1,25 @@
-import storageService from '../../storage-service.js'
-import {BRICK_COL_COUNT, BRICK_ROW_COUNT} from '../../constants.js'
+import storageService from '../../storage-service.js';
+import {
+    BRICK_COL_COUNT,
+    BRICK_ROW_COUNT,
+
+    INITIAL_CANVAS_COLOR,
+    
+    INITIAL_BRICK_WIDTH,
+    INITIAL_BRICK_HEIGHT,
+    INITIAL_BRICK_PADDING,
+    INITIAL_BRICK_OFFSET_X,
+    INITIAL_BRICK_OFFSET_Y
+} from '../../constants.js';
+
 
 class Brick {
     constructor() {
-        this.width = 70;
-        this.height = 20;
-        this.padding = 10;
-        this.offsetX = 25;
-        this.offsetY = 50;
+        this.width = INITIAL_BRICK_WIDTH;
+        this.height = INITIAL_BRICK_HEIGHT;
+        this.padding = INITIAL_BRICK_PADDING;
+        this.offsetX = INITIAL_BRICK_OFFSET_X;
+        this.offsetY = INITIAL_BRICK_OFFSET_Y;
         this.visible = true;
     }
 
@@ -28,9 +40,10 @@ class Brick {
         let arrOfBricks = JSON.parse(storageService.get('arrayOfBricks'));
 
         if (arrOfBricks) {
-arrOfBricks.forEach(column => {
-            column.forEach(item => item.visible = true);
-        });
+
+            arrOfBricks.forEach(column => {
+                column.forEach(item => item.visible = true);
+            });
         }
         
 
@@ -50,7 +63,7 @@ arrOfBricks.forEach(column => {
             column.forEach(brick => {
                 ctx.beginPath();
                 ctx.rect(brick.x, brick.y, brick.width, brick.height);
-                ctx.fillStyle = brick.visible ? '#444444' : 'transparent';
+                ctx.fillStyle = brick.visible ? INITIAL_CANVAS_COLOR : 'transparent';
                 ctx.fill();
                 ctx.closePath();
             })
@@ -58,6 +71,7 @@ arrOfBricks.forEach(column => {
         
         storageService.set('arrayOfBricks', JSON.stringify(arrOfBricks))
     }
+
 
     drawBricks() {
         let bricks = JSON.parse(storageService.get('arrayOfBricks'));

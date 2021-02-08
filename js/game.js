@@ -7,14 +7,13 @@ class Game {
         this.paused = false;
     }
 
-    pausegame() {
+    pauseGame() {
         this.paused = true;
     }
 
     resumeGame() {
         this.paused = false;
     }
-
 
     setCurrentUser(userName) {
         this.currentPlayer = userName;
@@ -39,6 +38,7 @@ class Game {
     }
 
     endGame() {
+        this.paused = false;
         this.started = false;
         this.gameOver = true;
     }

@@ -1,6 +1,3 @@
-import game from '../../game.js'
-
-
 const mainTemplate = 
 `
 <div class="banner banner-greeting"></div>

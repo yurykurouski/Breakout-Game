@@ -13,6 +13,7 @@ export function moveBall() {
     if (game.started) {
         ball.posX += ball.dX;
         ball.posY += ball.dY;
+        storageService.set('ball', JSON.stringify(ball));
     }
 
     const canvas = document.querySelector('canvas');

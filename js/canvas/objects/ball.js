@@ -57,6 +57,12 @@ class Ball {
         this.dY = INITIAL_BALL_dY;
         storageService.set('ball', JSON.stringify(ball));
     }
+
+    setSpeed(speed) {
+        this.dX = +speed;
+        this.dY = -speed;
+        storageService.set('ball', JSON.stringify(ball));
+    }
 }
 
 const ball = new Ball();

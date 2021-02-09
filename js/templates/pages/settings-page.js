@@ -37,7 +37,7 @@ const settingsTemplate =
 
 
         <div class="settings-field">
-            <input type="radio" id="size_3" name="size" value="4">
+            <input type="radio" id="size_3" name="size" value="40">
             <label for="size_3">0.5x</label>
         </div>
     </div>

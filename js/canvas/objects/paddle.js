@@ -31,6 +31,11 @@ class Paddle {
         this.posX = 260;
         this.posY = 430;
     }
+
+    setWidth(size) {
+        this.width = +size;
+        storageService.set('paddle', JSON.stringify(paddle))
+    }
 }
 
 const paddle = new Paddle();

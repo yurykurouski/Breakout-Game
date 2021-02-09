@@ -3,10 +3,17 @@ import { INDEX_URL, MAIN_URL, SETTINGS_URL } from './constants.js';
 import renderMainPage from './render/render-main.js';
 import renderInitialPage from './render/render-initial.js';
 import renderSettingsPage from './render/render-settings.js';
+import game from './game.js';
 
 
 export function renderPage() {
     const { pathname: currentUrl } = window.location;
+
+    if (!game.currentPlayer) {
+        window.history.pushState({}, null , window.location.origin + '/');
+        renderInitialPage();
+        return
+    }
 
     if (INDEX_URL.includes(currentUrl)) {
         renderInitialPage();

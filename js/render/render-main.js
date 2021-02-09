@@ -9,13 +9,12 @@ import mainTemplate from '../templates/pages/main-page.js';
 import toogleBallSpeed from '../canvas/operators/toogle-ball-speed.js';
 import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
 import goToSettings from '../go-to-settings.js';
+import game from '../game.js';
 
 
 
 function renderMainPage() {
 
-    const game = JSON.parse(storageService.get('game'));
-    
     if (!game.currentPlayer) {
         renderInitialPage();
         return
@@ -25,14 +24,15 @@ function renderMainPage() {
     container.innerHTML = mainTemplate;
 
     const greetingBanner = document.querySelector('.banner.banner-greeting');
-    greetingBanner.innerHTML = `Hello, ${game.currentPlayer ? game.currentPlayer : "anonymous"}`
+    greetingBanner.innerHTML = `Hello, ${game.currentPlayer}`
 
     const nameSpan = document.querySelector('.payer_name');
-    nameSpan.innerHTML = `Name: ${game.currentPlayer ? game.currentPlayer : "anonymous"}`
+    nameSpan.innerHTML = `Name: ${game.currentPlayer}`
 
     // const greetingBanner = document.querySelector('.banner.banner-greeting');
     setTimeout(() => { showBanner(greetingBanner) }, 500);
     
+
     //update canvas and animation
     updateCanvas()
 
@@ -54,6 +54,7 @@ function renderMainPage() {
     const restartGameBtn = document.getElementById('restart-game-btn');
     restartGameBtn.addEventListener('click', gameOver);
 
+    //кнопка настройки
     const settingsBtn = document.getElementById('settings-btn');
     settingsBtn.addEventListener('click', goToSettings);
    

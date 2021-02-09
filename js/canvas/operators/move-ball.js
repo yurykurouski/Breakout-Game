@@ -11,9 +11,9 @@ import { BRICK_COL_COUNT, BRICK_ROW_COUNT } from "../../constants.js";
 
 export function moveBall() {
     if (game.started) {
+        //смещение шарика каждый раз когда обновляется канвас
         ball.posX += ball.dX;
         ball.posY += ball.dY;
-        storageService.set('ball', JSON.stringify(ball));
     }
 
     const canvas = document.querySelector('canvas');

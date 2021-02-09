@@ -1,7 +1,7 @@
 const settingsTemplate = 
 `
 <div class="banner banner-info"></div>
-
+<button class="back-btn"><i class="fas fa-backward"></i></button>
 <form action="" class="settings-from">
     <div class="speed-settings-fields">
         <h3>Ball speed</h3>

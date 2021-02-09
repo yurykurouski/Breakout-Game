@@ -2,6 +2,7 @@ import { showBanner } from "../utils.js";
 import { playAudio } from "../audio/audio.js";
 import storageService from "../storage-service.js";
 import settingsTemplate from "../templates/pages/settings-page.js";
+import backToMain from "./../go-to-main.js"
 
 
 
@@ -17,6 +18,9 @@ function renderSettingsPage() {
     infoBanner.innerHTML = `${game.currentPlayer}, set difficulty`;
 
     setTimeout(() => { showBanner(infoBanner) }, 500);
+
+    const backBtn = document.querySelector('.back-btn');
+    backBtn.addEventListener('click', backToMain);
 
 
 

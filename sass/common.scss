@@ -77,4 +77,22 @@ button {
       top: 0;
     }
   }
+
+  .back-btn {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+
+    width: 80px;
+
+    i {
+      transition: 00.2s ease;
+    }
+
+    &:hover {
+      i {
+        transform: translateX(-3px);
+      }
+    }
+  }
 }

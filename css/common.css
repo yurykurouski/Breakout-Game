@@ -57,5 +57,14 @@ button {
     justify-content: center; }
     .container .banner.banner-show {
       top: 0; }
+  .container .back-btn {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 80px; }
+    .container .back-btn i {
+      transition: 00.2s ease; }
+    .container .back-btn:hover i {
+      transform: translateX(-3px); }
 
 /*# sourceMappingURL=common.css.map */

@@ -57,6 +57,15 @@ button {
     justify-content: center; }
     .container .banner.banner-show {
       top: 0; }
+  .container .back-btn {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 80px; }
+    .container .back-btn i {
+      transition: 00.2s ease; }
+    .container .back-btn:hover i {
+      transform: translateX(-3px); }
 
 .container #run-game-form {
   display: flex;
@@ -164,7 +173,7 @@ button {
   flex-direction: column;
   position: absolute;
   left: 20px;
-  top: 20px; }
+  top: 80px; }
   .container .asside-buttons button {
     width: 80px;
     height: 80px;
@@ -179,9 +188,6 @@ button {
     transition: 0.3s;
     transform: translateY(-4px); }
 
-.container h1 {
-  font-size: 3rem;
-  margin-bottom: 20px; }
 .container .settings-from {
   display: flex;
   flex-direction: row;

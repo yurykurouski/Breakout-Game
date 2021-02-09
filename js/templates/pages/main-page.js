@@ -14,7 +14,10 @@ const mainTemplate =
     <button id="settings-btn"><i class="fas fa-cog"></i></button>
     <button id="records-btn"><i class="fas fa-trophy"></i></button>
 </div>
-
+<div class="records-wrapper">
+    <h1>records</h1>
+    <button id="close-btn">Close</button>
+</div>
 `
 
 export default mainTemplate;

@@ -57,6 +57,23 @@ function renderMainPage() {
     //кнопка настройки
     const settingsBtn = document.getElementById('settings-btn');
     settingsBtn.addEventListener('click', goToSettings);
+
+    //кнопка рекорды
+    const recordsBtn = document.getElementById('records-btn');
+    const recordsCloseBtn = document.getElementById('close-btn');
+    const recordsWrapper = document.querySelector('.records-wrapper')
+
+    recordsBtn.addEventListener('click', () => {
+        recordsWrapper.classList.add('show');
+    })
+
+    recordsCloseBtn.addEventListener('click', () => {
+        recordsWrapper.classList.remove('show');
+    })
+
+
+
+
    
     if (!game.started) {
         toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);

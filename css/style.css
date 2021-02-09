@@ -159,5 +159,63 @@ button {
       transition: none; }
 .container #restart-game-btn {
   width: 70px; }
+.container .asside-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+  top: 20px; }
+  .container .asside-buttons button {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    font-size: 2rem; }
+  .container .asside-buttons i {
+    transition: 0.3s; }
+  .container .asside-buttons #settings-btn:hover i {
+    transition: 0.3s;
+    transform: rotate(45deg); }
+  .container .asside-buttons #records-btn:hover i {
+    transition: 0.3s;
+    transform: translateY(-4px); }
+
+.container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px; }
+.container .settings-from {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .container .settings-from .settings-field {
+    padding: 10px;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .container .settings-from .settings-field input {
+      display: none; }
+      .container .settings-from .settings-field input:checked + label {
+        background-color: #cccccc;
+        font-weight: bold; }
+    .container .settings-from .settings-field label {
+      flex-grow: 1;
+      cursor: pointer;
+      transition: 0.2s ease;
+      text-align: center; }
+      .container .settings-from .settings-field label:hover {
+        background-color: #cccccc; }
+  .container .settings-from h3 {
+    margin-bottom: 20px;
+    font-size: 2.5rem; }
+  .container .settings-from .speed-settings-fields,
+  .container .settings-from .paddle-settings-fields {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .container .settings-from #settings-submit-btn {
+    flex-basis: 100%;
+    margin-top: 30px; }
 
 /*# sourceMappingURL=style.css.map */

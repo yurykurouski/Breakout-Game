@@ -8,6 +8,8 @@ import startGame from '../canvas/operators/start-game.js';
 import mainTemplate from '../templates/pages/main-page.js';
 import toogleBallSpeed from '../canvas/operators/toogle-ball-speed.js';
 import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
+import goToSettings from '../go-to-settings.js';
+
 
 
 function renderMainPage() {
@@ -51,6 +53,9 @@ function renderMainPage() {
     //кнопка рестарт
     const restartGameBtn = document.getElementById('restart-game-btn');
     restartGameBtn.addEventListener('click', gameOver);
+
+    const settingsBtn = document.getElementById('settings-btn');
+    settingsBtn.addEventListener('click', goToSettings);
    
     if (!game.started) {
         toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);

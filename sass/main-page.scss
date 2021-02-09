@@ -35,4 +35,39 @@
   #restart-game-btn {
     width: 70px;
   }
+
+  .asside-buttons {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    button {
+      width: 80px;
+      height: 80px;
+      margin: 20px;
+
+      font-size: 2rem;
+    }
+
+    i {
+      transition: 0.3s;
+    }
+
+    #settings-btn:hover {
+      i {
+        transition: 0.3s;
+        transform: rotate(45deg);
+      }
+    }
+
+    #records-btn:hover {
+      i {
+        transition: 0.3s;
+        transform: translateY(-4px);
+      }
+    }
+  }
 }

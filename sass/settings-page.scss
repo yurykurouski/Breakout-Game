@@ -1,0 +1,63 @@
+.container {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .settings-from {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .settings-field {
+      padding: 10px;
+      font-size: 2rem;
+
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      input {
+        display: none;
+
+        &:checked + label {
+          background-color: $border-color;
+          font-weight: bold;
+        }
+      }
+
+      label {
+        flex-grow: 1;
+
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        text-align: center;
+
+        &:hover {
+          background-color: $border-color;
+        }
+      }
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+
+    .speed-settings-fields,
+    .paddle-settings-fields {
+      flex-basis: 50%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #settings-submit-btn {
+      flex-basis: 100%;
+
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 export const INDEX_URL = ['/', '/index.html'];
 export const MAIN_URL = ['/main'];
+export const SETTINGS_URL = ['/settings']
 
 
 export const INITIAL_ZERO_RECORD = 0;

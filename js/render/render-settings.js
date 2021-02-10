@@ -7,6 +7,7 @@ import ball from "../canvas/objects/ball.js";
 import { INITIAL_BALL_dX } from "../constants.js";
 import paddle from "../canvas/objects/paddle.js";
 import { navigateToUrl } from "../routing.js";
+import { moveBall } from "../canvas/operators/move-ball.js";
 
 
 
@@ -40,12 +41,12 @@ function submitSettings(event) {
     const formData = new FormData(event.target);
     const ballSpeed = formData.get('speed');
     const paddleSize = formData.get('size');
-    console.log(ballSpeed, paddleSize);
 
-    // INITIAL_BALL_dX = +ballSpeed;
-    // INITIAL_BALL_dY = -ballSpeed
     ball.setSpeed(ballSpeed);
     paddle.setWidth(paddleSize);
+    
+    
+    paddle.setInitialPaddlePos()
 
 
     navigateToUrl(`/main`);

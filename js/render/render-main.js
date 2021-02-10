@@ -77,8 +77,6 @@ function renderMainPage() {
     })
 
 
-
-
    
     if (!game.started) {
         toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);

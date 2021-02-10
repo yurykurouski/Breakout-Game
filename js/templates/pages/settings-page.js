@@ -12,13 +12,13 @@ const settingsTemplate =
         </div>
         
         <div class="settings-field">
-            <input type="radio" id="speed_2" name="speed" value="5">
-            <label for="speed_2">1.25x</label>
+            <input type="radio" id="speed_2" name="speed" value="6">
+            <label for="speed_2">1.5x</label>
         </div>
 
         <div class="settings-field">
-            <input type="radio" id="speed_3" name="speed" value="6">
-            <label for="speed_3">1.5x</label>
+            <input type="radio" id="speed_3" name="speed" value="8">
+            <label for="speed_3">2x</label>
          </div>
     </div>
 

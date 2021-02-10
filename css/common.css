@@ -61,7 +61,8 @@ button {
     position: absolute;
     top: 80px;
     left: 50px;
-    width: 80px; }
+    width: 80px;
+    height: 80px; }
     .container .back-btn i {
       transition: 00.2s ease; }
     .container .back-btn:hover i {

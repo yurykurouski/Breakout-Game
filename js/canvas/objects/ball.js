@@ -59,8 +59,8 @@ class Ball {
     }
 
     setSpeed(speed) {
-        this.dX = +speed;
-        this.dY = -speed;
+        this.dX = Math.abs(+speed);
+        this.dY = -Math.abs(+speed);
         storageService.set('ball', JSON.stringify(ball));
     }
 }

@@ -4,6 +4,7 @@
     font-size: 2rem;
     font-style: italic;
   }
+
   #canvas {
     background-color: white;
     display: block;
@@ -22,6 +23,7 @@
     top: 0;
     left: 0;
   }
+
   #pause-game-btn,
   #start-game-btn,
   #restart-game-btn {
@@ -29,6 +31,7 @@
     margin: 20px;
 
     transition: 0.2s ease;
+
     &:disabled {
       background-color: $light;
       opacity: 0.5;
@@ -65,14 +68,12 @@
 
     #settings-btn:hover {
       i {
-        transition: 0.3s;
         transform: rotate(45deg);
       }
     }
 
     #records-btn:hover {
       i {
-        transition: 0.3s;
         transform: translateY(-4px);
       }
     }

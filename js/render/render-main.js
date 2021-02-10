@@ -10,6 +10,8 @@ import toogleBallSpeed from '../canvas/operators/toogle-ball-speed.js';
 import {startMovingPaddle, stopMovingPaddle} from '../canvas/operators/move-paddle.js';
 import goToSettings from '../go-to-settings.js';
 import game from '../game.js';
+import goToInitial from '../go-to-initial.js';
+import ball from '../canvas/objects/ball.js';
 
 
 
@@ -60,6 +62,17 @@ function renderMainPage() {
     settingsBtn.addEventListener(
         'click',
         function () { goToSettings(intId) },
+        false
+    );
+
+    //кнопка назад (выход)
+    const backBtn = document.querySelector('.back-btn');
+    backBtn.addEventListener(
+        'click',
+        function () {
+            goToInitial(intId)
+            
+        } ,
         false
     );
 

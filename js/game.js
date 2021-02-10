@@ -11,6 +11,14 @@ class Game {
         this.paused = true;
     }
 
+    resetGame() {
+        this.started = false;
+        this.currentPlayer = null;
+        this.score = 0;
+        this.gameOver = false;
+        this.paused = false;
+    }
+
     resumeGame() {
         this.paused = false;
     }

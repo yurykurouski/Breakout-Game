@@ -6,6 +6,7 @@ import paddle from "../objects/paddle.js";
 
 
 function startGame() {
+    
     toogleGameHandlers();
 
     game.startGame();

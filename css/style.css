@@ -188,10 +188,8 @@ button {
   .container .asside-buttons i {
     transition: 0.3s; }
   .container .asside-buttons #settings-btn:hover i {
-    transition: 0.3s;
     transform: rotate(45deg); }
   .container .asside-buttons #records-btn:hover i {
-    transition: 0.3s;
     transform: translateY(-4px); }
   .container .asside-buttons #settings-btn,
   .container .asside-buttons #records-btn {

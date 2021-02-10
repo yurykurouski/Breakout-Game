@@ -11,7 +11,8 @@ function renderInitialPage() {
     const container = document.getElementById('container');
     container.innerHTML = startTemplate;
 
-    game.deleteCurrentUser();
+    game.resetGame();
+
     storageService.set('game', JSON.stringify(game))
 
     bricks.clearField();

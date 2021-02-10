@@ -153,6 +153,10 @@ button {
 .container .payer_name {
   font-size: 2rem;
   font-weight: bold; }
+.container .back-btn {
+  position: relative;
+  top: 0;
+  left: 0; }
 .container #pause-game-btn,
 .container #start-game-btn,
 .container #restart-game-btn {

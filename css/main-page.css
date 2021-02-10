@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$light".
-        on line 28 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\main-page.scss
+        on line 33 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\main-page.scss
 
-23:     width: 200px;
-24:     margin: 20px;
-25: 
-26:     transition: 0.2s ease;
-27:     &:disabled {
-28:       background-color: $light;
-29:       opacity: 0.5;
+28:     width: 200px;
+29:     margin: 20px;
 30: 
-31:       &:hover {
-32:         transition: none;
-33:       }
+31:     transition: 0.2s ease;
+32:     &:disabled {
+33:       background-color: $light;
+34:       opacity: 0.5;
+35: 
+36:       &:hover {
+37:         transition: none;
+38:       }
 
 Backtrace:
-E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\main-page.scss:28
+E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\main-page.scss:33
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -84,4 +84,4 @@ D:/install/koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$light\".\A         on line 28 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\main-page.scss\A \A 23:     width: 200px;\A 24:     margin: 20px;\A 25: \A 26:     transition: 0.2s ease;\A 27:     &:disabled {\A 28:       background-color: $light;\A 29:       opacity: 0.5;\A 30: \A 31:       &:hover {\A 32:         transition: none;\A 33:       }"; }
+  content: "Error: Undefined variable: \"$light\".\A         on line 33 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\main-page.scss\A \A 28:     width: 200px;\A 29:     margin: 20px;\A 30: \A 31:     transition: 0.2s ease;\A 32:     &:disabled {\A 33:       background-color: $light;\A 34:       opacity: 0.5;\A 35: \A 36:       &:hover {\A 37:         transition: none;\A 38:       }"; }

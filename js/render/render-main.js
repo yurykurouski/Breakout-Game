@@ -34,7 +34,8 @@ function renderMainPage() {
     
 
     //update canvas and animation
-    updateCanvas()
+    // updateCanvas()
+    var intId = setInterval(() => { updateCanvas() }, 18);
 
     
     //ивенты на управление платформой
@@ -56,7 +57,11 @@ function renderMainPage() {
 
     //кнопка настройки
     const settingsBtn = document.getElementById('settings-btn');
-    settingsBtn.addEventListener('click', goToSettings);
+    settingsBtn.addEventListener(
+        'click',
+        function () { goToSettings(intId) },
+        false
+    );
 
     //кнопка рекорды
     const recordsBtn = document.getElementById('records-btn');

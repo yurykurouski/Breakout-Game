@@ -10,6 +10,9 @@ import { BRICK_COL_COUNT, BRICK_ROW_COUNT } from "../../constants.js";
 
 
 export function moveBall() {
+
+    
+
     if (game.started) {
         //смещение шарика каждый раз когда обновляется канвас
         ball.posX += ball.dX;

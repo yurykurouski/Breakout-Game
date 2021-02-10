@@ -30,8 +30,10 @@ export function toogleGameHandlers() {
     const pauseBtn = document.getElementById('pause-game-btn');
     const startGameBtn = document.getElementById('start-game-btn');
     const restartGameBtn = document.getElementById('restart-game-btn');
+    const recordsBtn = document.getElementById('records-btn');
+    const settingsBtn = document.getElementById('settings-btn');
     
-    toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
+    toggleDisabled(pauseBtn, startGameBtn, restartGameBtn, recordsBtn, settingsBtn);
 }
 
 

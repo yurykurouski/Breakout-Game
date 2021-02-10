@@ -22,6 +22,8 @@
   #restart-game-btn {
     width: 200px;
     margin: 20px;
+
+    transition: 0.2s ease;
     &:disabled {
       background-color: $light;
       opacity: 0.5;
@@ -67,6 +69,20 @@
       i {
         transition: 0.3s;
         transform: translateY(-4px);
+      }
+    }
+
+    #settings-btn,
+    #records-btn {
+      transition: 0.2s ease;
+
+      &:disabled {
+        background-color: $light;
+        opacity: 0.5;
+
+        &:hover {
+          transition: none;
+        }
       }
     }
   }

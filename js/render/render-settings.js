@@ -8,6 +8,7 @@ import { INITIAL_BALL_dX } from "../constants.js";
 import paddle from "../canvas/objects/paddle.js";
 import { navigateToUrl } from "../routing.js";
 import { moveBall } from "../canvas/operators/move-ball.js";
+import { movePaddle } from "../canvas/operators/move-paddle.js";
 
 
 

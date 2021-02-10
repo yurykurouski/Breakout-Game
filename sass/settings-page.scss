@@ -1,4 +1,16 @@
 .container {
+  .settings-btn,
+  .records-btn {
+    &:disabled {
+      background-color: $light;
+      opacity: 0.5;
+
+      &:hover {
+        transition: none;
+      }
+    }
+  }
+
   .settings-from {
     display: flex;
     flex-direction: row;

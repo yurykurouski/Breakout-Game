@@ -157,7 +157,8 @@ button {
 .container #start-game-btn,
 .container #restart-game-btn {
   width: 200px;
-  margin: 20px; }
+  margin: 20px;
+  transition: 0.2s ease; }
   .container #pause-game-btn:disabled,
   .container #start-game-btn:disabled,
   .container #restart-game-btn:disabled {
@@ -188,6 +189,16 @@ button {
   .container .asside-buttons #records-btn:hover i {
     transition: 0.3s;
     transform: translateY(-4px); }
+  .container .asside-buttons #settings-btn,
+  .container .asside-buttons #records-btn {
+    transition: 0.2s ease; }
+    .container .asside-buttons #settings-btn:disabled,
+    .container .asside-buttons #records-btn:disabled {
+      background-color: #efefef;
+      opacity: 0.5; }
+      .container .asside-buttons #settings-btn:disabled:hover,
+      .container .asside-buttons #records-btn:disabled:hover {
+        transition: none; }
 .container .records-wrapper {
   min-height: 100vh;
   width: 100%;
@@ -205,6 +216,13 @@ button {
     top: 50px;
     right: 50px; }
 
+.container .settings-btn:disabled,
+.container .records-btn:disabled {
+  background-color: #efefef;
+  opacity: 0.5; }
+  .container .settings-btn:disabled:hover,
+  .container .records-btn:disabled:hover {
+    transition: none; }
 .container .settings-from {
   display: flex;
   flex-direction: row;

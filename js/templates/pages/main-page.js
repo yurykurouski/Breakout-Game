@@ -11,8 +11,8 @@ const mainTemplate =
     <button id="start-game-btn" disabled>Start</button>
 </div>
 <div class="asside-buttons">
-    <button id="settings-btn"><i class="fas fa-cog"></i></button>
-    <button id="records-btn"><i class="fas fa-trophy"></i></button>
+    <button id="settings-btn" ><i class="fas fa-cog"></i></button>
+    <button id="records-btn" ><i class="fas fa-trophy"></i></button>
 </div>
 <div class="records-wrapper">
     <h1>records</h1>

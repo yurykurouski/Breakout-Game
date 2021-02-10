@@ -1,4 +1,4 @@
-import { showBanner } from "../utils.js";
+import { setCheckedInputs, showBanner } from "../utils.js";
 import { playAudio } from "../audio/audio.js";
 import storageService from "../storage-service.js";
 import settingsTemplate from "../templates/pages/settings-page.js";
@@ -29,6 +29,15 @@ function renderSettingsPage() {
 
     const settingsForm = document.querySelector('.settings-from');
     settingsForm.addEventListener('submit', submitSettings);
+
+
+    //делаем, чтобы при нажатии на настройки отображались текущие установки скорости
+    // и ширины платформы
+    const speedInputs = Array.from(document.querySelectorAll('.speed-settings-fields input'));
+    const paddleInputs = Array.from(document.querySelectorAll('.paddle-settings-fields input'));
+    setCheckedInputs(paddleInputs, paddle.width)
+    setCheckedInputs(speedInputs, ball.dX || ball.tempDX)
+
 
     playAudio(window);
 

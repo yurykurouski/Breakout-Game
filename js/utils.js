@@ -33,3 +33,12 @@ export function toogleGameHandlers() {
     
     toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
 }
+
+
+export function setCheckedInputs(arr, inputValue) {
+        arr.forEach(item => {
+            if (+item.value === Math.abs(inputValue)) {
+                item.setAttribute('checked', true);
+            }
+        })
+}

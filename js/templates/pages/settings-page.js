@@ -7,7 +7,7 @@ const settingsTemplate =
         <h3>Ball speed</h3>
 
         <div class="settings-field">
-            <input type="radio" id="speed_1" name="speed" value="4" checked>
+            <input type="radio" id="speed_1" name="speed" value="4" >
             <label for="speed_1">1x</label>
         </div>
         

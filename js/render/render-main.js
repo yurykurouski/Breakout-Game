@@ -12,6 +12,7 @@ import goToSettings from '../go-to-settings.js';
 import game from '../game.js';
 import goToInitial from '../go-to-initial.js';
 import ball from '../canvas/objects/ball.js';
+import goToRecords from '../go-to-records.js';
 
 
 
@@ -78,16 +79,26 @@ function renderMainPage() {
 
     //кнопка рекорды
     const recordsBtn = document.getElementById('records-btn');
-    const recordsCloseBtn = document.getElementById('close-btn');
-    const recordsWrapper = document.querySelector('.records-wrapper')
+    goToRecords
+    recordsBtn.addEventListener(
+        'click',
+        function () {
+            goToRecords(intId)
+        } ,
+        false
+    );
 
-    recordsBtn.addEventListener('click', () => {
-        recordsWrapper.classList.add('show');
-    })
 
-    recordsCloseBtn.addEventListener('click', () => {
-        recordsWrapper.classList.remove('show');
-    })
+    // const recordsCloseBtn = document.getElementById('close-btn');
+    // const recordsWrapper = document.querySelector('.records-wrapper')
+
+    // recordsBtn.addEventListener('click', () => {
+    //     recordsWrapper.classList.add('show');
+    // })
+
+    // recordsCloseBtn.addEventListener('click', () => {
+    //     recordsWrapper.classList.remove('show');
+    // })
 
 
    

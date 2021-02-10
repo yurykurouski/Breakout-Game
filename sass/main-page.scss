@@ -68,6 +68,7 @@
 
     #settings-btn:hover {
       i {
+        transition: 0.3s;
         transform: rotate(45deg);
       }
     }

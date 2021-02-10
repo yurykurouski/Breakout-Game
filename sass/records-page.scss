@@ -1,0 +1,30 @@
+.container {
+  ul {
+    list-style-type: none;
+    width: 400px;
+
+    font-size: 1.5rem;
+
+    li {
+      &.header {
+        font-weight: bold;
+      }
+
+      display: flex;
+
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid $border-color;
+
+      .record-col {
+        flex-grow: 1;
+
+        text-align: center;
+      }
+
+      .index-col {
+        flex-basis: 20%;
+      }
+    }
+  }
+}

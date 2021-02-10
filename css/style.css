@@ -188,6 +188,7 @@ button {
   .container .asside-buttons i {
     transition: 0.3s; }
   .container .asside-buttons #settings-btn:hover i {
+    transition: 0.3s;
     transform: rotate(45deg); }
   .container .asside-buttons #records-btn:hover i {
     transform: translateY(-4px); }
@@ -260,5 +261,22 @@ button {
   .container .settings-from #settings-submit-btn {
     flex-basis: 100%;
     margin-top: 30px; }
+
+.container ul {
+  list-style-type: none;
+  width: 400px;
+  font-size: 1.5rem; }
+  .container ul li {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc; }
+    .container ul li.header {
+      font-weight: bold; }
+    .container ul li .record-col {
+      flex-grow: 1;
+      text-align: center; }
+    .container ul li .index-col {
+      flex-basis: 20%; }
 
 /*# sourceMappingURL=style.css.map */

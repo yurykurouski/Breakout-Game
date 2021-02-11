@@ -15,6 +15,11 @@ function renderRecords() {
     let place = 0;
 
     sortedArray.forEach(item => {
+
+        if (!item.record) {
+            return
+        }
+        
         const newListItem = document.createElement('li');
 
         newListItem.innerHTML = `

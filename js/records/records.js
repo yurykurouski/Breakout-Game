@@ -9,7 +9,6 @@ class RecordsList {
         this.records = [...this.records, record]
     }
 
-
 }
 
 const records = JSON.parse(storageService.get('records'))

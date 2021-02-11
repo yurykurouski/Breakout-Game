@@ -9,6 +9,10 @@ function writeRecord() {
         record: game.score
     }
 
+    if (!newRecord.record) {
+        return
+    }
+
     recordsList.setRecord(newRecord);
 
     storageService.set('records', JSON.stringify(recordsList.records))

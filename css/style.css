@@ -264,19 +264,31 @@ button {
 
 .container ul {
   list-style-type: none;
-  width: 400px;
+  width: 500px;
+  max-height: 600px;
+  overflow: auto;
   font-size: 1.5rem; }
   .container ul li {
+    transition: 0.2s ease;
     display: flex;
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid #cccccc; }
+    .container ul li:nth-child(1) {
+      position: sticky;
+      top: 0;
+      background-color: #efefef; }
+    .container ul li:hover {
+      background-color: #cccccc; }
     .container ul li.header {
       font-weight: bold; }
-    .container ul li span:nth-child(2) {
-      flex-grow: 1;
-      text-align: center; }
     .container ul li span:nth-child(1) {
-      flex-basis: 20%; }
+      flex-basis: 30%; }
+    .container ul li span:nth-child(2) {
+      flex-basis: 20%;
+      text-align: center; }
+    .container ul li span:nth-child(3) {
+      flex-grow: 1;
+      text-align: right; }
 
 /*# sourceMappingURL=style.css.map */

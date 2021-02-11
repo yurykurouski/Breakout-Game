@@ -16,13 +16,13 @@
       text-align: center;
       border-bottom: 1px solid $border-color;
 
-      .record-col {
+      span:nth-child(2) {
         flex-grow: 1;
 
         text-align: center;
       }
 
-      .index-col {
+      span:nth-child(1) {
         flex-basis: 20%;
       }
     }

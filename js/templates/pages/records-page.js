@@ -6,37 +6,39 @@ const recordsTemplate =
 
 <div class="records-table">
     <div class="records">
-        <ul>
+        <ul id="records-list">
             <li class="header">
                 <span class="index-col">Index</span>
                 <span class="record-col">Record</span>
                 <span class="player-col">Player</span>
             </li>
-            <li>
-                <span class="index-col">1</span>
-                <span class="record-col">999</span>
-                <span class="player-col">Player</span>
-            </li>
-            <li>
-                <span class="index-col">1</span>
-                <span class="record-col">999</span>
-                <span class="player-col">Player</span>
-            </li>
-            <li>
-                <span class="index-col">1</span>
-                <span class="record-col">999</span>
-                <span class="player-col">Player</span>
-            </li>
-            <li>
-                <span class="index-col">1</span>
-                <span class="record-col">999</span>
-                <span class="player-col">Player</span>
-            </li>
+            
         </ul>
     </div>
 </div>
 
 `
+
+{/* <li>
+                <span class="index-col">1</span>
+                <span class="record-col">999</span>
+                <span class="player-col">Player</span>
+            </li>
+            <li>
+                <span class="index-col">1</span>
+                <span class="record-col">999</span>
+                <span class="player-col">Player</span>
+            </li>
+            <li>
+                <span class="index-col">1</span>
+                <span class="record-col">999</span>
+                <span class="player-col">Player</span>
+            </li>
+            <li>
+                <span class="index-col">1</span>
+                <span class="record-col">999</span>
+                <span class="player-col">Player</span>
+            </li> */}
 
 
 export default recordsTemplate;

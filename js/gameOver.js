@@ -13,6 +13,9 @@ import writeRecord from "./records/write-record.js";
 
 //работает когда мяч падает мимо платформы и когда нажимаем на кнопку рестарт
 export function gameOver() {
+    const pauseBtn = document.getElementById('pause-game-btn');
+    pauseBtn.innerHTML = 'Pause'
+    
     gameOverSound();
     toogleGameHandlers();
     

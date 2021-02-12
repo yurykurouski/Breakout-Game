@@ -1,5 +1,6 @@
 import { playAudio } from "../audio/audio.js";
 import backToMain from "../go-to-main.js";
+import renderRecords from "../records/render-records.js";
 import recordsTemplate from "../templates/pages/records-page.js";
 
 function renderRecordsPage() {
@@ -9,6 +10,8 @@ function renderRecordsPage() {
 
     const backBtn = document.querySelector('.back-btn');
     backBtn.addEventListener('click', backToMain);
+
+    renderRecords();
 
     playAudio(window);
 

@@ -4,33 +4,34 @@ export function playAudio(btn) {
     const colorModeBtn = document.getElementById('color-mode-btn');
 
 
-    const myAudio = new Audio;
+    
 
     if 
     (
         btn === rulesBtn ||
         btn === rulesCloseBtn
     ) {
+        const myAudio = new Audio;
         myAudio.src = "../audio-files/rules-btn.wav";
         myAudio.play();
     }
 
-    if 
-    (btn === colorModeBtn) {
+    if (btn === colorModeBtn) {
+        const myAudio = new Audio;
         myAudio.src = "../audio-files/turn-light-btn.mp3";
         myAudio.play();
     }
 
     //for errors
-    if 
-    (!btn) {
+    if (!btn) {
+        const myAudio = new Audio;
         myAudio.src = "../audio-files/error.mp3";
         myAudio.play();
     }
 
     //for popstate
-    if 
-    (btn === window) {
+    if (btn === window) {
+        const myAudio = new Audio;
         myAudio.src = "../audio-files/popstate.mp3";
         myAudio.play();
     }
@@ -56,3 +57,12 @@ export function gameOverSound() {
     myAudio.src = "../audio-files/game-over.mp3";
     myAudio.play();
 }
+
+// export function techno() {
+//     const myAudio = new Audio;
+//     myAudio.src = "../audio-files/techno.mp3";
+//     myAudio.currentTime = 80;
+//     myAudio.play();
+//     myAudio.volume = 0.5;
+    
+// }

@@ -94,6 +94,15 @@
     }
   }
 
+  .asside-effect {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+
+    transition: 0.5s;
+    font-size: 2rem;
+  }
+
   .records-wrapper {
     min-height: 100vh;
     width: 100%;

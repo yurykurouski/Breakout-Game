@@ -15,7 +15,9 @@ const mainTemplate =
     <button class="back-btn"><i class="fas fa-backward"></i></button>
     <button id="settings-btn" ><i class="fas fa-cog"></i></button>
     <button id="records-btn" ><i class="fas fa-trophy"></i></button>
+    
 </div>
+
 <div class="records-wrapper">
     <h1>records</h1>
     <button id="close-btn">Close</button>
@@ -23,5 +25,10 @@ const mainTemplate =
 `
 
 export default mainTemplate;
+
+{/* <button id="music-btn" ><i class="fas fa-music"></i></button> */ }
+{/* <div class="asside-effect">
+    <span>Hit</span>
+</div> */}
 
 

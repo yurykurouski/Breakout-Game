@@ -20,6 +20,7 @@ function toogleBallSpeed(event) {
             storageService.set('game', JSON.stringify(game))
 
             pauseBtn.innerHTML = 'Resume';
+            return
             
         } else {
             ball.resumeBallSpeed();
@@ -27,9 +28,13 @@ function toogleBallSpeed(event) {
             storageService.set('game', JSON.stringify(game))
 
             pauseBtn.innerHTML = 'Pause'
+            return
         }
        
     }
+
+    return
+
    
 }
 

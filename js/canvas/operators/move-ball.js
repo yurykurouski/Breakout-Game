@@ -72,7 +72,7 @@ export function moveBall() {
 
                         storageService.set('game', JSON.stringify(game))
                         storageService.set('arrayOfBricks', JSON.stringify(arrayOfBricks))
-                        
+
                         renderScore();
                     }
                 }

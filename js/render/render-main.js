@@ -92,6 +92,9 @@ function renderMainPage() {
         false
     );
 
+    // const musicBtn = document.getElementById('music-btn');
+    // musicBtn.addEventListener('click', techno);
+
 
     // const recordsCloseBtn = document.getElementById('close-btn');
     // const recordsWrapper = document.querySelector('.records-wrapper')

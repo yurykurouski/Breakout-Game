@@ -202,6 +202,12 @@ button {
       .container .asside-buttons #settings-btn:disabled:hover,
       .container .asside-buttons #records-btn:disabled:hover {
         transition: none; }
+.container .asside-effect {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transition: 0.5s;
+  font-size: 2rem; }
 .container .records-wrapper {
   min-height: 100vh;
   width: 100%;

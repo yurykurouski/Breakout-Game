@@ -7,6 +7,8 @@ import paddle from "../objects/paddle.js";
 
 function startGame(event) {
 
+
+    console.log(game.started, game.paused)
     if (
         !game.paused && 
         event.key === "Enter" ||

@@ -32,5 +32,6 @@ export function gameOver() {
     bricks.showAllBricks();
     paddle.setInitialPaddlePos();
     ball.setInitialPos();
-    ball.setSpeed(ball.dX);
+    // ball.setSpeed(ball.dX);
+    ball.setSpeed(ball.dX || ball.tempDX)
 }

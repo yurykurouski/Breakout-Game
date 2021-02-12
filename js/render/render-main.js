@@ -23,6 +23,8 @@ function renderMainPage() {
         return
     }
 
+    
+
     const container = document.getElementById('container');
     container.innerHTML = mainTemplate;
 
@@ -45,6 +47,14 @@ function renderMainPage() {
     document.addEventListener('keydown', startMovingPaddle);
     document.addEventListener('keyup', stopMovingPaddle);
 
+    //старт на ентер
+    if (!game.started ) {
+        document.addEventListener('keydown', startGame )
+    } 
+
+    if (!game.paused) {
+        document.addEventListener('keydown', toogleBallSpeed )
+    }
 
     //кнопка пауза
     const pauseBtn = document.getElementById('pause-game-btn');

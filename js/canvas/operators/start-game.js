@@ -5,13 +5,18 @@ import storageService from "../../storage-service.js";
 import paddle from "../objects/paddle.js";
 
 
-function startGame() {
+function startGame(event) {
+
+    if (
+        !game.paused && 
+        event.key === "Enter" ||
+        event.type === "click"
+    ) {
+        toogleGameHandlers();
+        game.startGame();
+        storageService.set('game', JSON.stringify(game))
+    }
     
-    toogleGameHandlers();
-
-    game.startGame();
-
-    storageService.set('game', JSON.stringify(game))
 }
 
 export default startGame;

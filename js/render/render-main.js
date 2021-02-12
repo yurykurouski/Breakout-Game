@@ -70,21 +70,15 @@ function renderMainPage() {
     const backBtn = document.querySelector('.back-btn');
     backBtn.addEventListener(
         'click',
-        function () {
-            goToInitial(intId)
-            
-        } ,
+        function () { goToInitial(intId) } ,
         false
     );
 
     //кнопка рекорды
     const recordsBtn = document.getElementById('records-btn');
-    goToRecords
     recordsBtn.addEventListener(
         'click',
-        function () {
-            goToRecords(intId)
-        } ,
+        function () { goToRecords(intId) } ,
         false
     );
 

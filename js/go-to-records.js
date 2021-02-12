@@ -11,10 +11,10 @@ function goToRecords(intId) {
 
     renderRecords();
 
-    ball.setInitialBallSpeed();
-    ball.setInitialPos();
+    // ball.setInitialBallSpeed();
+    // ball.setInitialPos();
 
-    game.resetScore();
+    // game.resetScore();
 
     return
 

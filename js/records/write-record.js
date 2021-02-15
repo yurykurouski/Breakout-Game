@@ -4,9 +4,12 @@ import recordsList from "./records.js";
 
 function writeRecord() {
 
+    const date = new Date();
+
     const newRecord = {
         player: game.currentPlayer,
-        record: game.score
+        record: game.score,
+        date: date.toLocaleString(),
     }
 
     if (!newRecord.record) {

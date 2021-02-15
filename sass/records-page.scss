@@ -3,12 +3,15 @@
     list-style-type: none;
     width: 500px;
     max-height: 600px;
-    overflow: auto;
+
+    overflow-y: auto;
 
     font-size: 1.5rem;
 
     li {
-      transition: 0.2s ease;
+      transition: 0.3s ease-in-out;
+
+      overflow: hidden;
 
       &:nth-child(1) {
         position: sticky;
@@ -23,11 +26,12 @@
 
       &.header {
         font-weight: bold;
+        z-index: 2;
       }
 
       display: flex;
 
-      padding: 10px;
+      padding: 13px;
       text-align: center;
       border-bottom: 1px solid $border-color;
 
@@ -45,6 +49,24 @@
         flex-grow: 1;
 
         text-align: right;
+
+        position: relative;
+
+        span {
+          position: absolute;
+          right: 0%;
+          bottom: 140%;
+
+          font-size: 0.8rem;
+
+          transition: 0.2s ease;
+        }
+      }
+
+      &:hover {
+        .date-col {
+          bottom: 80%;
+        }
       }
     }
   }

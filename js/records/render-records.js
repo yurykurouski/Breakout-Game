@@ -25,7 +25,8 @@ function renderRecords() {
         newListItem.innerHTML = `
         <span class="index-col">${place+1}</span>
         <span class="record-col">${item.record}</span>
-        <span class="player-col">${item.player}</span>
+        <span class="player-col">${item.player} <span class="date-col">${item.date}</span></span>
+        
         `
 
         recordsListing.appendChild(newListItem);

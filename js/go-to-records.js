@@ -9,7 +9,7 @@ function goToRecords(intId) {
 
     navigateToUrl('/records');
 
-    renderRecords();
+    // renderRecords();
 
     // ball.setInitialBallSpeed();
     // ball.setInitialPos();

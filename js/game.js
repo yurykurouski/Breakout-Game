@@ -1,3 +1,7 @@
+import ball from "./canvas/objects/ball.js";
+import paddle from "./canvas/objects/paddle.js";
+import backToMain from "./go-to-main.js";
+
 class Game {
     constructor() {
         this.started = false;
@@ -32,7 +36,53 @@ class Game {
     }
 
     increaseScore() {
-        this.score += 1;
+
+        if (Math.abs(ball.dX) === 4 && (paddle.width === 80)) {
+            this.score += 1;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 6 && (paddle.width === 80)) {
+            this.score += 2;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 8 && (paddle.width === 80)) {
+            this.score += 3;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 4 && (paddle.width === 60)) {
+            this.score += 2;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 6 && (paddle.width === 60)) {
+            this.score += 4;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 8 && (paddle.width === 60)) {
+            this.score += 6;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 4 && (paddle.width === 40)) {
+            this.score += 3;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 6 && (paddle.width === 40)) {
+            this.score += 6;
+            return
+        }
+
+        if (Math.abs(ball.dX) === 8 && (paddle.width === 40)) {
+            this.score += 9;
+            return
+        }
+
+        
     }
 
     resetScore() {

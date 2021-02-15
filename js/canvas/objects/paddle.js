@@ -5,7 +5,7 @@ import storageService from '../../storage-service.js'
 class Paddle {
     constructor() {
         this.posX = 260;
-        this.posY = 430;
+        this.posY = 440;
         this.width = 80;
         this.height = 10;
         this.speed = 8;
@@ -34,7 +34,6 @@ class Paddle {
         //settimout для того чтобы рендерилось после того как инициализируется канвас
         setTimeout(() => {
             this.posX = canvas.width / 2 - this.width / 2;
-            this.posY = 430;
         }, 0)
     }
 

@@ -81,7 +81,7 @@ export function moveBall() {
     }
 
     //если падает мимо платформы на нижнюю грань
-    if (ball.posY + ball.radius > canvas.height) {
+    if (ball.posY + ball.radius >= canvas.height) {
         gameOver();
     }
 

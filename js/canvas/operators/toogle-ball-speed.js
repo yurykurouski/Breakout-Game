@@ -14,7 +14,7 @@ function toogleBallSpeed(event) {
 
         const pauseBtn = document.getElementById('pause-game-btn');
 
-        if (ball.dX && ball.dY ) {
+        if (ball.dX && ball.dY && game.started) {
             ball.stopBall();
             game.pauseGame();
 

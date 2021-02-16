@@ -47,6 +47,18 @@ playBtn.addEventListener('click', () => {
     }
 })
 
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+
+//time/song update
+audio.addEventListener('timeupdate', updateProgress);
+
+//click progress
+progressContainer.addEventListener('click', setProgress);
+
+//когда песня кончается
+audio.addEventListener('ended', nextSong);
+
 
 
 function loadSong(song) {
@@ -71,4 +83,50 @@ function pauseSong() {
 
     audio.pause();
 }
+
+
+function prevSong() {
+    songIndex--;
+
+    if (songIndex < 0) {
+        songIndex = songs.length - 1;
+    }
+
+    loadSong(songs[songIndex]);
+
+    playSong();
+}
+
+
+function nextSong() {
+    songIndex++;
+
+    if (songIndex > songs.length - 1) {
+        songIndex = 0;
+    }
+
+    loadSong(songs[songIndex]);
+
+    playSong();
+}
+
+function updateProgress(event) {
+    const { duration, currentTime } = event.srcElement;
+
+    const progressPercents = (currentTime / duration) * 100;
+
+    progress.style.width = `${progressPercents}%`;
+}
+
+
+function setProgress(event) {
+    const width = this.clientWidth;
+
+    const clickPosX = event.offsetX;
+
+    const duration = audio.duration;
+
+    audio.currentTime = (clickPosX / width) * duration;
+}
+
 

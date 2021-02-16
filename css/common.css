@@ -14,6 +14,10 @@ body {
 .night-mode {
   transition: 0.5s;
   filter: invert(0.9); }
+  .night-mode #cover {
+    filter: invert(1); }
+  .night-mode #cover {
+    filter: invert(1); }
 
 button {
   background-color: white;

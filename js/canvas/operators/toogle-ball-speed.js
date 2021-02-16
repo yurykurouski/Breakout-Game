@@ -7,24 +7,31 @@ function toogleBallSpeed(event) {
 
     if (
         game.started &&
-        event.key === " " ||
-        event.type === "click"
+        event.type === "click" ||
+        event.key === " "
     ) {
-        console.log(event.key)
+        console.log(event.type)
 
         const pauseBtn = document.getElementById('pause-game-btn');
 
         if (ball.dX && ball.dY ) {
             ball.stopBall();
             game.pauseGame();
+
+            event.target.blur();
+
             storageService.set('game', JSON.stringify(game))
 
             pauseBtn.innerHTML = 'Resume';
+
             return
             
         } else {
             ball.resumeBallSpeed();
             game.resumeGame();
+
+            event.target.blur();
+
             storageService.set('game', JSON.stringify(game))
 
             pauseBtn.innerHTML = 'Pause'

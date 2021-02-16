@@ -10,7 +10,8 @@ function startGame(event) {
 
     console.log(game.started, game.paused)
     if (
-        !game.paused && 
+        !game.paused &&
+        !game.started &&
         event.key === "Enter" ||
         event.type === "click"
     ) {

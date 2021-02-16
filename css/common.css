@@ -68,4 +68,83 @@ button {
     .container .back-btn:hover i {
       transform: translateX(-3px); }
 
+.music-container {
+  border: 2px solid #cccccc;
+  display: flex;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  z-index: 10;
+  background-color: white;
+  border-radius: 5px; }
+  .music-container .music-info {
+    background-color: #cccccc;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 0px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.2s ease-in, opacity 0.2s ease-in; }
+    .music-container .music-info .progress-container {
+      background-color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+      height: 4px;
+      width: 100%; }
+      .music-container .music-info .progress-container .progress {
+        background-color: #fe8daa;
+        border-radius: 5px;
+        height: 100%;
+        width: 0%;
+        transition: width 0.1s linear; }
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%); }
+  .music-container.play .img-container img {
+    animation-play-state: running; }
+  .music-container button {
+    border: none; }
+  .music-container .img-container {
+    position: relative;
+    width: 110px; }
+    .music-container .img-container::after {
+      content: "";
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, 25%); }
+    .music-container .img-container img {
+      border-radius: 50%;
+      object-fit: cover;
+      height: 110px;
+      width: inherit;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      animation: rotate 3s linear infinite;
+      animation-play-state: paused; }
+  .music-container .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; }
+    .music-container .navigation .action-btn-big {
+      font-size: 1.5rem; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 /*# sourceMappingURL=common.css.map */

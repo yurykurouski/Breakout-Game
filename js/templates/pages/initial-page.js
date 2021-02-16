@@ -14,5 +14,7 @@ const startTemplate = `
     <input type="text" name="name" maxlength="15" placeholder="Enter your name...">
     <button id="run-game-btn" type="submit">Run</button>
 </form>
+
+
 `
 export default startTemplate;

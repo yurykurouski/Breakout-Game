@@ -32,7 +32,7 @@ export const INITIAL_BALL_dY = -4;
 export const INITIAL_PADDLE_POS_X = 260; 
 export const INITIAL_PADDLE_POS_Y = 440; 
 export const INITIAL_PADDLE_WIDTH = 80; 
-export const INITIAL_PADDLE_HEIGHT = 10; 
+export const INITIAL_PADDLE_HEIGHT = 9; 
 export const INITIAL_PADDLE_SPEED = 8; 
 export const INITIAL_PADDLE_dX = 0; 
 

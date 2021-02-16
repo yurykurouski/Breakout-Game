@@ -27,5 +27,20 @@ export const INITIAL_BALL_dX = 4;
 export const INITIAL_BALL_dY = -4;
 export const INITIAL_BALL_RADIUS = 10;
 
+export const INITIAL_PADDLE_POS_X = 260; 
+export const INITIAL_PADDLE_POS_Y = 440; 
+export const INITIAL_PADDLE_WIDTH = 80; 
+export const INITIAL_PADDLE_HEIGHT = 10; 
+export const INITIAL_PADDLE_SPEED = 8; 
+export const INITIAL_PADDLE_dX = 0; 
+
+
+// this.posX = 260;
+//         this.posY = 440;
+//         this.width = 80;
+//         this.height = 10;
+//         this.speed = 8;
+//         this.dX = 0;
+
 
 

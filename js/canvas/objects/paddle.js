@@ -1,15 +1,26 @@
-import { INITIAL_CANVAS_COLOR } from '../../constants.js';
+import {
+    INITIAL_CANVAS_COLOR,
+    INITIAL_PADDLE_POS_X,
+    INITIAL_PADDLE_POS_Y,
+    INITIAL_PADDLE_WIDTH,
+    INITIAL_PADDLE_HEIGHT,
+    INITIAL_PADDLE_SPEED,
+    INITIAL_PADDLE_dX,
+
+
+} from '../../constants.js';
+
 import storageService from '../../storage-service.js'
 
 
 class Paddle {
     constructor() {
-        this.posX = 260;
-        this.posY = 440;
-        this.width = 80;
-        this.height = 10;
-        this.speed = 8;
-        this.dX = 0;
+        this.posX = INITIAL_PADDLE_POS_X;
+        this.posY = INITIAL_PADDLE_POS_Y;
+        this.width = INITIAL_PADDLE_WIDTH;
+        this.height = INITIAL_PADDLE_HEIGHT;
+        this.speed = INITIAL_PADDLE_SPEED;
+        this.dX = INITIAL_PADDLE_dX;
     }
 
     drawPaddle() {
@@ -43,7 +54,7 @@ class Paddle {
     }
 
     setInitialPaddleWidth() {
-        this.width = 80;
+        this.width = INITIAL_PADDLE_WIDTH;
     }
 }
 

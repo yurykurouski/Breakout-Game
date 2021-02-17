@@ -31,7 +31,7 @@ const cover = document.getElementById('cover');
 //названия песен
 const songs = ['DJShadow-This-Time', 'FaltyDL-Hip-Love', 'Kalson-Power'];
 
-let songIndex = 1;
+let songIndex = 0;
 
 loadSong(songs[songIndex]);
 

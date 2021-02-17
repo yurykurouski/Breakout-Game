@@ -1,21 +1,17 @@
 /*
 Error: Undefined variable: "$border-color".
-        on line 11 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss
+        on line 2 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\music-player.scss
 
-6:     input {
-7:       line-height: 4rem;
-8:       padding-left: 20px;
-9:       font-size: 1.5rem;
-10:       border-radius: 5px;
-11:       border: 3px dotted $border-color;
-12:       color: $dark;
-13:       transition: 0.4s;
-14: 
-15:       &::placeholder {
-16:         animation-name: flashingInputPlaceholderText;
+1: .music-container {
+2:   border: 2px solid $border-color;
+3:   display: flex;
+4:   padding: 15px 20px;
+5:   position: absolute;
+6:   bottom: 10px;
+7:   left: 0;
 
 Backtrace:
-E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss:11
+E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\music-player.scss:2
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -23,28 +19,6 @@ D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:7
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `_perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -88,4 +62,4 @@ D:/install/koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$border-color\".\A         on line 11 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss\A \A 6:     input {\A 7:       line-height: 4rem;\A 8:       padding-left: 20px;\A 9:       font-size: 1.5rem;\A 10:       border-radius: 5px;\A 11:       border: 3px dotted $border-color;\A 12:       color: $dark;\A 13:       transition: 0.4s;\A 14: \A 15:       &::placeholder {\A 16:         animation-name: flashingInputPlaceholderText;"; }
+  content: "Error: Undefined variable: \"$border-color\".\A         on line 2 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\music-player.scss\A \A 1: .music-container {\A 2:   border: 2px solid $border-color;\A 3:   display: flex;\A 4:   padding: 15px 20px;\A 5:   position: absolute;\A 6:   bottom: 10px;\A 7:   left: 0;"; }

@@ -56,7 +56,7 @@ button {
 .container {
   min-height: 100vh;
   width: 100%;
-  max-width: 1240px;
+  // max-width: 1240px;
   margin: auto;
   position: relative;
   display: flex;
@@ -104,121 +104,5 @@ button {
         transform: translateX(-3px);
       }
     }
-  }
-}
-
-.music-container {
-  border: 2px solid $border-color;
-  display: flex;
-  padding: 10px 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  z-index: 10;
-
-  .music-info {
-    background-color: $border-color;
-    border-radius: 15px 15px 0 0;
-
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: calc(100% - 40px);
-    padding: 10px 10px 0px 150px;
-
-    opacity: 0;
-    transform: translateY(0%);
-
-    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
-
-    .progress-container {
-      background-color: $white;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 10px 0;
-      height: 4px;
-      width: 100%;
-
-      .progress {
-        background-color: #fe8daa;
-        border-radius: 5px;
-        height: 100%;
-        width: 0%;
-
-        transition: width 0.1s linear;
-      }
-    }
-  }
-
-  &.play {
-    .music-info {
-      opacity: 1;
-      transform: translateY(-100%);
-    }
-    .img-container {
-      img {
-        animation-play-state: running;
-      }
-    }
-  }
-
-  button {
-    // transform: scale(0.5);
-    border: none;
-  }
-
-  background-color: white;
-  border-radius: 5px;
-
-  .img-container {
-    position: relative;
-    width: 110px;
-
-    &::after {
-      content: "";
-      background-color: $white;
-      border-radius: 50%;
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      transform: translate(-50%, 25%);
-    }
-
-    img {
-      border-radius: 50%;
-      object-fit: cover;
-      height: 110px;
-      width: inherit;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      animation: rotate 3s linear infinite;
-
-      animation-play-state: paused;
-    }
-  }
-
-  .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-
-    .action-btn-big {
-      font-size: 1.5rem;
-    }
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }

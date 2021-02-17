@@ -1,0 +1,136 @@
+.music-container {
+  border: 2px solid $border-color;
+  display: flex;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 2;
+
+  .banner {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.999;
+    z-index: 3;
+    background-color: $white;
+  }
+
+  .music-info {
+    background-color: $border-color;
+    border-radius: 0px 5px 5px 0;
+
+    position: absolute;
+    top: 10%;
+    left: -20px;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 1;
+
+    opacity: 0.5;
+    transform: translateX(-50%);
+
+    transition: transform 0.4s ease-in, opacity 0.2s ease-in;
+
+    .progress-container {
+      background-color: $white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+      height: 4px;
+      width: 100%;
+
+      .progress {
+        background-color: #fe8daa;
+        border-radius: 5px;
+        height: 100%;
+        width: 0%;
+
+        transition: width 0.1s linear;
+      }
+    }
+
+    .h4 {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &.play {
+    .music-info {
+      opacity: 1;
+      transform: translateX(calc(100% + 20px));
+    }
+    .img-container {
+      img {
+        animation-play-state: running;
+      }
+    }
+  }
+
+  button {
+    // transform: scale(0.5);
+    border: none;
+  }
+
+  background-color: white;
+  border-radius: 5px;
+
+  .img-container {
+    position: relative;
+    width: 110px;
+
+    &::after {
+      content: "";
+      background-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, 25%);
+      z-index: 4;
+    }
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      height: 110px;
+      width: inherit;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      animation: rotate 5s linear infinite;
+
+      animation-play-state: paused;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    .action-btn-big {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

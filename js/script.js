@@ -1,5 +1,14 @@
-import { playAudio } from './audio/audio.js';
-import {renderPage} from './routing.js';
+import { playAudio } from './audio/audio-sounds.js';
+import { renderPage } from './routing.js';
+import { SONGS_LIST, START_SONG_INDEX } from './constants.js'
+
+import loadSong from './audio/operators/load-song.js';
+import playSong from './audio/operators/play-song.js';
+import pauseSong from './audio/operators/pause-song.js';
+// import prevSong from './audio/operators/prev-song.js';
+// import nextSong from './audio/operators/next-song.js';
+import updateProgressLine from './audio/update-progress.js';
+import setProgressLine from './audio/operators/set-progress.js';
 
 
 //загружаем страницу при инициализации
@@ -13,28 +22,19 @@ window.addEventListener('popstate', () => {
 
 
 
-
-
+//элементы музыкального плеера
 const musicContainer = document.getElementById('music_container');
-
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
-
 const audio = document.getElementById('audio');
-const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress_container');
 
-const tittle = document.getElementById('tittle');
-const cover = document.getElementById('cover');
 
-//названия песен
-const songs = ['DJShadow-This-Time', 'FaltyDL-Hip-Love', 'Kalson-Power'];
+export let songIndex = 0;
 
-let songIndex = 0;
-
-loadSong(songs[songIndex]);
-
+//pзагружаем первую песню
+loadSong(SONGS_LIST[songIndex]);
 
 
 playBtn.addEventListener('click', () => {
@@ -48,85 +48,45 @@ playBtn.addEventListener('click', () => {
 })
 
 prevBtn.addEventListener('click', prevSong);
-nextBtn.addEventListener('click', nextSong);
-
-//time/song update
-audio.addEventListener('timeupdate', updateProgress);
-
-//click progress
-progressContainer.addEventListener('click', setProgress);
-
-//когда песня кончается
+nextBtn.addEventListener('click', nextSong) ;
+audio.addEventListener('timeupdate', updateProgressLine);
+progressContainer.addEventListener('click', setProgressLine);
 audio.addEventListener('ended', nextSong);
 
 
+function nextSong() {
+    songIndex++;
 
-function loadSong(song) {
-    tittle.innerText = song;
-    audio.src = `./audio-files/${song}.mp3`;
-    cover.src = `./audio-files/labels/${song}.jpg`;
+    if (songIndex > SONGS_LIST.length - 1) {
+        songIndex = 0;
+    }
+
+    loadSong(SONGS_LIST[songIndex]);
+
+    playSong();
 }
 
-
-function playSong() {
-    musicContainer.classList.add('play');
-    playBtn.querySelector('i.fas').classList.remove('fa-play');
-    playBtn.querySelector('i.fas').classList.add('fa-pause');
-
-    audio.play();
-}
-
-function pauseSong() {
-    musicContainer.classList.remove('play');
-    playBtn.querySelector('i.fas').classList.add('fa-play');
-    playBtn.querySelector('i.fas').classList.remove('fa-pause');
-
-    audio.pause();
-}
 
 
 function prevSong() {
     songIndex--;
 
     if (songIndex < 0) {
-        songIndex = songs.length - 1;
+        songIndex = SONGS_LIST.length - 1;
     }
 
-    loadSong(songs[songIndex]);
+    loadSong(SONGS_LIST[songIndex]);
 
     playSong();
 }
 
 
-function nextSong() {
-    songIndex++;
-
-    if (songIndex > songs.length - 1) {
-        songIndex = 0;
-    }
-
-    loadSong(songs[songIndex]);
-
-    playSong();
-}
-
-function updateProgress(event) {
-    const { duration, currentTime } = event.srcElement;
-
-    const progressPercents = (currentTime / duration) * 100;
-
-    progress.style.width = `${progressPercents}%`;
-}
 
 
-function setProgress(event) {
-    const width = this.clientWidth;
 
-    const clickPosX = event.offsetX;
 
-    const duration = audio.duration;
 
-    audio.currentTime = (clickPosX / width) * duration;
-}
+
+
 
 

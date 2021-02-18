@@ -1,5 +1,5 @@
 import { gameOver } from '../gameOver.js';
-import { playAudio } from '../audio/audio.js';
+import { playAudio } from '../audio/audio-sounds.js';
 import updateCanvas from './update-canvas.js';
 import storageService from '../storage-service.js';
 import renderInitialPage from './render-initial.js';

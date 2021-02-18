@@ -1,6 +1,6 @@
 import game from '../game.js';
 import runGame from '../run-game.js';
-import { playAudio } from '../audio/audio.js';
+import { playAudio } from '../audio/audio-sounds.js';
 import bricks from '../canvas/objects/brick.js';
 import storageService from '../storage-service.js';
 import { toggleDisabled, changeColorMode } from '../utils.js';

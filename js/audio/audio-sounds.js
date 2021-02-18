@@ -2,8 +2,6 @@ export function playAudio(btn) {
     const rulesBtn = document.getElementById('rules-btn');
     const rulesCloseBtn = document.getElementById('close-rules-btn');
     const colorModeBtn = document.getElementById('color-mode-btn');
-
-
     
 
     if 
@@ -39,7 +37,6 @@ export function playAudio(btn) {
 }
 
 export function brickBreakSound() {
-    
     const myAudio = new Audio;
     myAudio.src = "../audio-files/brick-broken.mp3";
     myAudio.play();
@@ -57,12 +54,3 @@ export function gameOverSound() {
     myAudio.src = "../audio-files/game-over.mp3";
     myAudio.play();
 }
-
-// export function techno() {
-//     const myAudio = new Audio;
-//     myAudio.src = "../audio-files/techno.mp3";
-//     myAudio.currentTime = 80;
-//     myAudio.play();
-//     myAudio.volume = 0.5;
-    
-// }

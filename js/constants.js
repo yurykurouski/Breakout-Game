@@ -37,6 +37,11 @@ export const INITIAL_PADDLE_SPEED = 8;
 export const INITIAL_PADDLE_dX = 0; 
 
 
+//music player
+export const SONGS_LIST = ['DJShadow-This-Time', 'FaltyDL-Hip-Love', 'Kalson-Power'];
+export const START_SONG_INDEX = 0;
+
+
 
 
 

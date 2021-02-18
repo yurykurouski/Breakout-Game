@@ -5,7 +5,7 @@ import paddle from "../objects/paddle.js";
 import { renderScore } from '../../utils.js';
 import { gameOver } from "../../gameOver.js";
 import storageService from "../../storage-service.js";
-import { brickBreakSound } from "../../audio/audio.js";
+import { brickBreakSound } from "../../audio/audio-sounds.js";
 import { BRICK_COL_COUNT, BRICK_ROW_COUNT } from "../../constants.js";
 
 

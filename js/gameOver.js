@@ -4,7 +4,7 @@ import ball from "./canvas/objects/ball.js";
 import bricks from "./canvas/objects/brick.js";
 import paddle from "./canvas/objects/paddle.js";
 
-import { gameOverSound } from "./audio/audio.js";
+import { gameOverSound } from "./audio/audio-sounds.js";
 import storageService from "./storage-service.js";
 import { renderScore, toogleGameHandlers } from "./utils.js";
 import recordsList from "./records/records.js";

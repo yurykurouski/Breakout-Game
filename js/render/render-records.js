@@ -1,4 +1,4 @@
-import { playAudio } from "../audio/audio.js";
+import { playAudio } from "../audio/audio-sounds.js";
 import backToMain from "../go-to-main.js";
 import renderRecords from "../records/render-records.js";
 import recordsTemplate from "../templates/pages/records-page.js";

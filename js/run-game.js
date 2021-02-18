@@ -1,7 +1,7 @@
 import game from './game.js';
 import { showBanner } from './utils.js';
 import { navigateToUrl } from './routing.js';
-import { playAudio } from './audio/audio.js';
+import { playAudio } from './audio/audio-sounds.js';
 import storageService from './storage-service.js';
 import recordsList from './records/records.js'
 

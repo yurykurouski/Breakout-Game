@@ -1,6 +1,6 @@
 import game from "../../game.js";
 import paddle from "../objects/paddle.js";
-import { paddleMove } from "../../audio/audio.js";
+import { paddleMove } from "../../audio/audio-sounds.js";
 import storageService from "../../storage-service.js";
 
 

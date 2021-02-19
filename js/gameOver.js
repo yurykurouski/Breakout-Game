@@ -10,6 +10,7 @@ import { renderScore, toogleGameHandlers } from "./utils.js";
 import recordsList from "./records/records.js";
 import { records } from "./records/records-history.js";
 import writeRecord from "./records/write-record.js";
+import renderFact from "./render/render-fact.js";
 
 //работает когда мяч падает мимо платформы и когда нажимаем на кнопку рестарт
 export function gameOver() {
@@ -41,33 +42,5 @@ export function gameOver() {
 
 }
 
-function renderFact() {
-    const factContainer = document.querySelector('.fact-container');
-   
-    const span = factContainer.querySelector('span');
-
-    if (span) {
-         span.parentNode.removeChild(span)
-    }
-    
-    const newSpan = document.createElement('span');
-
-    async function getData() {
-        const response = await fetch(`http://numbersapi.com/${game.score}`);
-
-        return await response.text();
-    }
-
-    getData().then(data => {
-        
-        newSpan.innerText = `${data}`;
-
-        factContainer.appendChild(newSpan);
-    });
-
-    factContainer.classList.add('show');
-
-
-}
 
 

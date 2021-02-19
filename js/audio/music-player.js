@@ -13,8 +13,13 @@ import {
 const audio = document.getElementById('audio');
 const cover = document.getElementById('cover');
 const playBtn = document.getElementById('play');
+const volumeBtn = document.getElementById('volume-btn');
 const tittle = document.getElementById('tittle');
 const musicContainer = document.getElementById('music_container');
+
+const volumeSize = document.getElementById('volume')
+
+const isMuted = volumeBtn.querySelector('i.fa-volume-mute');
 
 
 class MusicPlayer {
@@ -23,12 +28,11 @@ class MusicPlayer {
         this.songList = SONGS_LIST;
         this.audioSrc = AUDIO_SRC;
         this.coverSrc = COVER_SRC; 
+        this.tempVolume = 2;
 
-        const song = this.songList[this.currentSongIndex];
+        this.loadSong();
 
-        tittle.innerText = song;
-        audio.src = `${this.audioSrc}/${song}.mp3`;
-        cover.src = `${this.coverSrc}/${song}.jpg`;
+        this.updateVolumeSize();
     }
 
     loadSong() {
@@ -102,7 +106,57 @@ class MusicPlayer {
         audio.currentTime = (clickPosX / width) * duration;
     }
 
+    setVolumeValue(event) {
+
+        if (!audio.volume) {
+            return
+        }
+
+        const height = this.clientHeight;
+
+        const clickPosY = event.offsetY;
+
+        audio.volume = clickPosY / height;
+
+        musicPlayer.updateVolumeSize();
+        
+    }
+
+    updateVolumeSize() {
+
+        if (!audio.volume) {
+            return
+        }
+
+        const volumeValue = audio.volume;
+
+        const volumePrecents = volumeValue * 100;
+
+        volumeSize.style.height = `${volumePrecents}%`
+    }
+
+    togleVolume() {
+        if (audio.volume) {
+
+            volumeBtn.querySelector('i.fas').classList.remove('fa-volume-up');
+            volumeBtn.querySelector('i.fas').classList.add('fa-volume-mute');
+
+            audio.volume = 0;
+
+            
+        } else {
+
+            volumeBtn.querySelector('i.fas').classList.remove('fa-volume-mute');
+            volumeBtn.querySelector('i.fas').classList.add('fa-volume-up');
+
+            audio.volume = 1;
+
+        }
+    }
+
 }
+
+    
 
 
 const musicPlayer = new MusicPlayer();

@@ -16,10 +16,12 @@ window.addEventListener('popstate', () => {
 //элементы музыкального плеера
 const musicContainer = document.getElementById('music_container');
 const progressContainer = document.getElementById('progress_container');
+const volumeSizeContainer = document.getElementById('volume_container');
 
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const volumeBtn = document.getElementById('volume-btn');
 
 const audio = document.getElementById('audio');
 
@@ -44,6 +46,8 @@ nextBtn.addEventListener(
 
 audio.addEventListener('timeupdate', musicPlayer.updateProgressLine);
 
+
+
 progressContainer.addEventListener('click', musicPlayer.setProgressLine);
 
 audio.addEventListener(
@@ -51,7 +55,9 @@ audio.addEventListener(
     function () { musicPlayer.nextSong(currentSong) }
 );
 
+volumeBtn.addEventListener('click', musicPlayer.togleVolume)
 
+volumeSizeContainer.addEventListener('click', musicPlayer.setVolumeValue)
 
 
 

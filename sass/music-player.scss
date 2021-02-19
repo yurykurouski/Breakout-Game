@@ -122,6 +122,32 @@
     .action-btn-big {
       font-size: 1.5rem;
     }
+
+    .fa-volume-mute {
+      width: 27px;
+      text-align: left;
+    }
+
+    .volume-container {
+      background-color: $white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+      height: 100%;
+      width: 7px;
+      border: 1px solid $body-bg;
+      transform: rotate(180deg);
+      margin-left: 5px;
+
+      .volume {
+        background-color: #fe8daa;
+        border-radius: 5px;
+        height: 0%;
+        width: 100%;
+
+        transition: height 0.2s linear;
+      }
+    }
   }
 }
 

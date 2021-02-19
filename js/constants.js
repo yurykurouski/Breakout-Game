@@ -40,6 +40,8 @@ export const INITIAL_PADDLE_dX = 0;
 //music player
 export const SONGS_LIST = ['DJShadow-This-Time', 'FaltyDL-Hip-Love', 'Kalson-Power'];
 export const START_SONG_INDEX = 0;
+export const AUDIO_SRC = '../../audio-files';
+export const COVER_SRC = '../../audio-files/labels';
 
 
 

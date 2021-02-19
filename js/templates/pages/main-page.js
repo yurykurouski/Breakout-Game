@@ -18,10 +18,10 @@ const mainTemplate =
     
 </div>
 
-<div class="records-wrapper">
-    <h1>records</h1>
-    <button id="close-btn">Close</button>
+<div class="fact-container">
+    
 </div>
+
 `
 
 export default mainTemplate;

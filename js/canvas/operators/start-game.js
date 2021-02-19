@@ -6,6 +6,11 @@ import paddle from "../objects/paddle.js";
 
 
 function startGame(event) {
+    const factContainer = document.querySelector('.fact-container');
+
+    if (factContainer) {
+        factContainer.classList.remove('show');
+    }
 
 
     console.log(game.started, game.paused)

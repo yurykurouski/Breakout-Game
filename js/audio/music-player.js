@@ -13,13 +13,12 @@ import {
 const audio = document.getElementById('audio');
 const cover = document.getElementById('cover');
 const playBtn = document.getElementById('play');
-const volumeBtn = document.getElementById('volume-btn');
 const tittle = document.getElementById('tittle');
+const volumeSize = document.getElementById('volume');
+const volumeBtn = document.getElementById('volume-btn');
 const musicContainer = document.getElementById('music_container');
 
-const volumeSize = document.getElementById('volume')
 
-const isMuted = volumeBtn.querySelector('i.fa-volume-mute');
 
 
 class MusicPlayer {
@@ -28,7 +27,6 @@ class MusicPlayer {
         this.songList = SONGS_LIST;
         this.audioSrc = AUDIO_SRC;
         this.coverSrc = COVER_SRC; 
-        this.tempVolume = 2;
 
         this.loadSong();
 

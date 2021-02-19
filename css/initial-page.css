@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$border-color".
-        on line 11 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss
+        on line 13 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss
 
-6:     input {
-7:       line-height: 4rem;
-8:       padding-left: 20px;
-9:       font-size: 1.5rem;
-10:       border-radius: 5px;
-11:       border: 3px dotted $border-color;
-12:       color: $dark;
-13:       transition: 0.4s;
-14: 
-15:       &::placeholder {
-16:         animation-name: flashingInputPlaceholderText;
+8:     input {
+9:       line-height: 4rem;
+10:       padding-left: 20px;
+11:       font-size: 1.5rem;
+12:       border-radius: 5px;
+13:       border: 3px dotted $border-color;
+14:       color: $dark;
+15:       transition: 0.4s;
+16: 
+17:       &::placeholder {
+18:         animation-name: flashingInputPlaceholderText;
 
 Backtrace:
-E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss:11
+E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss:13
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 D:/install/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -88,4 +88,4 @@ D:/install/koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$border-color\".\A         on line 11 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss\A \A 6:     input {\A 7:       line-height: 4rem;\A 8:       padding-left: 20px;\A 9:       font-size: 1.5rem;\A 10:       border-radius: 5px;\A 11:       border: 3px dotted $border-color;\A 12:       color: $dark;\A 13:       transition: 0.4s;\A 14: \A 15:       &::placeholder {\A 16:         animation-name: flashingInputPlaceholderText;"; }
+  content: "Error: Undefined variable: \"$border-color\".\A         on line 13 of E:\_Frontend\JAVASCROPT course\Breakout-Game\sass\initial-page.scss\A \A 8:     input {\A 9:       line-height: 4rem;\A 10:       padding-left: 20px;\A 11:       font-size: 1.5rem;\A 12:       border-radius: 5px;\A 13:       border: 3px dotted $border-color;\A 14:       color: $dark;\A 15:       transition: 0.4s;\A 16: \A 17:       &::placeholder {\A 18:         animation-name: flashingInputPlaceholderText;"; }

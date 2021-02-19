@@ -232,6 +232,10 @@ button {
     top: 50px;
     right: 50px; }
 .container .fact-container {
+  background-color: white;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
   position: absolute;
   right: 20px;
   bottom: -100px;
@@ -239,6 +243,10 @@ button {
   max-height: 100px;
   transition: 0.5s ease-out;
   font-weight: bold; }
+  .container .fact-container i {
+    float: left;
+    font-size: 2rem;
+    padding-right: 5px; }
   .container .fact-container.show {
     bottom: 20px; }
 

@@ -17,15 +17,16 @@ function renderFact() {
         return await response.text();
     }
 
-    getData().then(data => {
+    getData()
+        .then(data => {
         
-        newSpan.innerText = `${data}`;
+            newSpan.innerHTML = `<i class="fas fa-info-circle"></i> ${data}`;
 
-        factContainer.appendChild(newSpan);
-    });
-
-    factContainer.classList.add('show');
-
+            factContainer.appendChild(newSpan);
+        })
+        .then(() => {
+            factContainer.classList.add('show');
+        });
 
 }
 

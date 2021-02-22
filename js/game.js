@@ -1,5 +1,18 @@
 import ball from "./canvas/objects/ball.js";
 import paddle from "./canvas/objects/paddle.js";
+import {
+    FAST_BALL_dX,
+    INITIAL_BALL_dX,
+    INITIAL_PADDLE_WIDTH,
+    MIDDLE_BALL_dX,
+    MIDDLE_PADDLE_WIDTH,
+    POINT_1X, POINT_2X,
+    POINT_3X, POINT_4X,
+    POINT_6X, POINT_9X,
+    SMALL_PADDLE_WIDTH
+
+} from "./constants.js";
+
 import backToMain from "./go-to-main.js";
 
 class Game {
@@ -35,54 +48,56 @@ class Game {
         this.currentPlayer = null;
     }
 
-    increaseScore() {
+    increaseScore(ballSpeed, paddleWidth) {
 
-        if (Math.abs(ball.dX) === 4 && (paddle.width === 80)) {
-            this.score += 1;
-            return
+        switch (ballSpeed) {
+
+            case INITIAL_BALL_dX:
+
+                switch (paddleWidth) {
+                    case INITIAL_PADDLE_WIDTH: this.score += POINT_1X;
+                        break;
+                    
+                    case MIDDLE_PADDLE_WIDTH: this.score += POINT_2X;;
+                        break;
+                    
+                    case SMALL_PADDLE_WIDTH: this.score += POINT_3X;
+                        break;
+                }
+
+                break;
+            
+            case MIDDLE_BALL_dX:
+
+                switch (paddleWidth) {
+                    case INITIAL_PADDLE_WIDTH: this.score += POINT_2X;
+                        break;
+                    
+                    case MIDDLE_PADDLE_WIDTH: this.score += POINT_4X;;
+                        break;
+                    
+                    case SMALL_PADDLE_WIDTH: this.score += POINT_6X;
+                        break;
+                }
+
+                break;
+            
+            case FAST_BALL_dX:
+
+                switch (paddleWidth) {
+                    case INITIAL_PADDLE_WIDTH: this.score += POINT_3X;
+                        break;
+                    
+                    case MIDDLE_PADDLE_WIDTH: this.score += POINT_6X;;
+                        break;
+                    
+                    case SMALL_PADDLE_WIDTH: this.score += POINT_9X;
+                        break;
+                }
+
+                break;
         }
 
-        if (Math.abs(ball.dX) === 6 && (paddle.width === 80)) {
-            this.score += 2;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 8 && (paddle.width === 80)) {
-            this.score += 3;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 4 && (paddle.width === 60)) {
-            this.score += 2;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 6 && (paddle.width === 60)) {
-            this.score += 4;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 8 && (paddle.width === 60)) {
-            this.score += 6;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 4 && (paddle.width === 40)) {
-            this.score += 3;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 6 && (paddle.width === 40)) {
-            this.score += 6;
-            return
-        }
-
-        if (Math.abs(ball.dX) === 8 && (paddle.width === 40)) {
-            this.score += 9;
-            return
-        }
-
-        
     }
 
     resetScore() {

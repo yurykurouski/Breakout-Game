@@ -68,7 +68,10 @@ export function moveBall() {
                         bricks.setHidden(item);
                         brickBreakSound();
 
-                        game.increaseScore();
+                        const ballSpeed = Math.abs(ball.dX);
+                        const paddleWidth = paddle.width
+
+                        game.increaseScore(ballSpeed, paddleWidth);
 
                         storageService.set('game', JSON.stringify(game))
                         storageService.set('arrayOfBricks', JSON.stringify(arrayOfBricks))

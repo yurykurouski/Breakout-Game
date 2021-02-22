@@ -26,6 +26,8 @@ export const INITIAL_BALL_POS_Y = 400;
 export const INITIAL_BALL_RADIUS = 10;
 export const INITIAL_BALL_dX = 4;
 export const INITIAL_BALL_dY = -4;
+export const MIDDLE_BALL_dX = 6;
+export const FAST_BALL_dX = 8;
 
 
 
@@ -35,6 +37,15 @@ export const INITIAL_PADDLE_WIDTH = 80;
 export const INITIAL_PADDLE_HEIGHT = 9; 
 export const INITIAL_PADDLE_SPEED = 8; 
 export const INITIAL_PADDLE_dX = 0; 
+export const MIDDLE_PADDLE_WIDTH = 60;
+export const SMALL_PADDLE_WIDTH = 40;
+
+export const POINT_1X = 1;
+export const POINT_2X = 2;
+export const POINT_3X = 3;
+export const POINT_4X = 4;
+export const POINT_6X = 6;
+export const POINT_9X = 9;
 
 
 //music player

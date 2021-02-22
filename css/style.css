@@ -256,7 +256,7 @@ button {
     width: 70px;
     height: 70px; }
   .container .fact-container {
-    width: calc((100% - 640px) / 2); }
+    max-width: calc((100% - 640px) / 2); }
     .container .fact-container.show {
       right: 10px;
       bottom: 20px; } }
@@ -457,5 +457,13 @@ button {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+@media screen and (max-height: 750px) {
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateX(0) translateY(-100%);
+    padding-left: 50%;
+    white-space: nowrap; }
+    .music-container.play .music-info h4 {
+      overflow: hidden; } }
 
 /*# sourceMappingURL=style.css.map */

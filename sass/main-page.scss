@@ -166,7 +166,7 @@
     }
 
     .fact-container {
-      width: calc((100% - 640px) / 2);
+      max-width: calc((100% - 640px) / 2);
 
       &.show {
         right: 10px;

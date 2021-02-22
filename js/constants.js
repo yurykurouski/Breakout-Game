@@ -13,6 +13,9 @@ export const INITIAL_CANVAS_COLOR = '#444444';
 export const BRICK_COL_COUNT = 7;
 export const BRICK_ROW_COUNT = 5;
 
+export const CANVAS_WIDTH = 600;
+export const CANVAS_HEIGHT = 450;
+
 
 export const INITIAL_BRICK_WIDTH = 70;
 export const INITIAL_BRICK_HEIGHT = 20;

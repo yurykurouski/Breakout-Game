@@ -1,3 +1,6 @@
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from "../../constants.js";
+
+
 const mainTemplate = 
 `
 
@@ -5,7 +8,7 @@ const mainTemplate =
 <span class="payer_name"> </span>
 <span class="score">Score: </span>
 
-<canvas id="canvas" width="600px" height="450px"></canvas>
+<canvas id="canvas" width="${CANVAS_WIDTH}px" height="${CANVAS_HEIGHT}px"></canvas>
 <div class="game-operators">
     <button id="pause-game-btn">Pause</button>
     <button id="restart-game-btn"><i class="fas fa-redo"></i></button>
@@ -25,10 +28,5 @@ const mainTemplate =
 `
 
 export default mainTemplate;
-
-{/* <button id="music-btn" ><i class="fas fa-music"></i></button> */ }
-{/* <div class="asside-effect">
-    <span>Hit</span>
-</div> */}
 
 

@@ -239,8 +239,7 @@ button {
   position: absolute;
   right: 20px;
   bottom: -100px;
-  max-width: 30%;
-  max-height: 100px;
+  max-width: 50%;
   transition: 0.5s ease-out;
   font-weight: bold; }
   .container .fact-container i {
@@ -250,6 +249,17 @@ button {
   .container .fact-container.show {
     bottom: 20px; }
 
+@media screen and (max-height: 750px) {
+  .container .asside-buttons button {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px; }
+  .container .fact-container {
+    width: calc((100% - 640px) / 2); }
+    .container .fact-container.show {
+      right: 10px;
+      bottom: 20px; } }
 .container .settings-btn:disabled,
 .container .records-btn:disabled {
   background-color: #efefef;

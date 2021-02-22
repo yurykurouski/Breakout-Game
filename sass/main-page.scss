@@ -136,8 +136,9 @@
     position: absolute;
     right: 20px;
     bottom: -100px;
-    max-width: 30%;
-    max-height: 100px;
+    max-width: 50%;
+    // width: calc((100% - 640px) / 2);
+
     transition: 0.5s ease-out;
     font-weight: bold;
 
@@ -149,6 +150,28 @@
 
     &.show {
       bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .container {
+    .asside-buttons {
+      button {
+        padding: 5px;
+        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .fact-container {
+      width: calc((100% - 640px) / 2);
+
+      &.show {
+        right: 10px;
+        bottom: 20px;
+      }
     }
   }
 }

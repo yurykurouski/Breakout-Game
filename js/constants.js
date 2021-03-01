@@ -33,15 +33,14 @@ export const MIDDLE_BALL_dX = 6;
 export const FAST_BALL_dX = 8;
 
 
-
-export const INITIAL_PADDLE_POS_X = 260; 
-export const INITIAL_PADDLE_POS_Y = 440; 
 export const INITIAL_PADDLE_WIDTH = 80; 
 export const INITIAL_PADDLE_HEIGHT = 9; 
 export const INITIAL_PADDLE_SPEED = 8; 
 export const INITIAL_PADDLE_dX = 0; 
 export const MIDDLE_PADDLE_WIDTH = 60;
 export const SMALL_PADDLE_WIDTH = 40;
+export const INITIAL_PADDLE_POS_X = CANVAS_WIDTH / 2 - INITIAL_PADDLE_WIDTH / 2; 
+export const INITIAL_PADDLE_POS_Y = CANVAS_HEIGHT - INITIAL_PADDLE_HEIGHT; 
 
 export const POINT_1X = 1;
 export const POINT_2X = 2;

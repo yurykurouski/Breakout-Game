@@ -23,8 +23,6 @@ function renderMainPage() {
         return
     }
 
-    
-
     const container = document.getElementById('container');
     container.innerHTML = mainTemplate;
 

@@ -17,9 +17,9 @@ import backToMain from "./go-to-main.js";
 import storageService from "./storage-service.js";
 
 class Game {
-    constructor() {
+    constructor(playerName) {
         this.started = false;
-        this.currentPlayer = null;
+        this.currentPlayer = playerName;
         this.score = 0;
         this.gameOver = false;
         this.paused = false;
@@ -115,9 +115,10 @@ class Game {
     }
 }
 
-// const temp = JSON.parse(storageService.get('game'))
-// const playerName = temp.currentPlayer;
+const temp = JSON.parse(storageService.get('game'))
+const playerName = temp.currentPlayer;
+console.log(playerName);
 
-const game = new Game();
+const game = new Game(playerName ? playerName : null);
 
 export default game;

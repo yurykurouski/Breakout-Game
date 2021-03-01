@@ -303,46 +303,6 @@ button {
     flex-basis: 100%;
     margin-top: 30px; }
 
-.container ul {
-  list-style-type: none;
-  width: 500px;
-  max-height: 600px;
-  overflow-y: auto;
-  font-size: 1.5rem; }
-  .container ul li {
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    padding: 13px;
-    text-align: center;
-    border-bottom: 1px solid #cccccc; }
-    .container ul li:nth-child(1) {
-      position: sticky;
-      top: 0;
-      background-color: #efefef; }
-    .container ul li:hover {
-      background-color: #cccccc; }
-    .container ul li.header {
-      font-weight: bold;
-      z-index: 2; }
-    .container ul li span:nth-child(1) {
-      flex-basis: 30%; }
-    .container ul li span:nth-child(2) {
-      flex-basis: 20%;
-      text-align: center; }
-    .container ul li span:nth-child(3) {
-      flex-grow: 1;
-      text-align: right;
-      position: relative; }
-      .container ul li span:nth-child(3) span {
-        position: absolute;
-        right: 0%;
-        bottom: 140%;
-        font-size: 0.8rem;
-        transition: 0.2s ease; }
-    .container ul li:hover .date-col {
-      bottom: 80%; }
-
 .music-container {
   border: 2px solid #cccccc;
   display: flex;
@@ -465,5 +425,42 @@ button {
     white-space: nowrap; }
     .music-container.play .music-info h4 {
       overflow: hidden; } }
+.container ul {
+  list-style-type: none;
+  width: 500px;
+  font-size: 1.5rem; }
+  .container ul li {
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc; }
+    .container ul li:nth-child(1) {
+      position: sticky;
+      top: 0;
+      background-color: #efefef; }
+    .container ul li:hover {
+      background-color: #cccccc; }
+    .container ul li.header {
+      font-weight: bold;
+      z-index: 2; }
+    .container ul li span:nth-child(1) {
+      flex-basis: 30%; }
+    .container ul li span:nth-child(2) {
+      flex-basis: 20%;
+      text-align: center; }
+    .container ul li span:nth-child(3) {
+      flex-grow: 1;
+      text-align: right;
+      position: relative; }
+      .container ul li span:nth-child(3) span {
+        position: absolute;
+        right: 0%;
+        bottom: 140%;
+        font-size: 0.8rem;
+        transition: 0.2s ease; }
+    .container ul li:hover .date-col {
+      bottom: 80%; }
 
 /*# sourceMappingURL=style.css.map */

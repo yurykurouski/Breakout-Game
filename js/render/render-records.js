@@ -11,7 +11,7 @@ function renderRecordsPage() {
     const backBtn = document.querySelector('.back-btn');
     backBtn.addEventListener('click', backToMain);
 
-    renderRecords();
+    renderRecords(10);
 
     playAudio(window);
 

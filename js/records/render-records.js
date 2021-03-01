@@ -1,7 +1,7 @@
 import storageService from "../storage-service.js";
 import recordsList from "./records.js";
 
-function renderRecords() {
+function renderRecords(countToShow) {
 
     const recordsListing = document.getElementById('records-list');
     
@@ -20,18 +20,23 @@ function renderRecords() {
             return
         }
         
-        const newListItem = document.createElement('li');
+        if (place < countToShow) {
 
-        newListItem.innerHTML = `
-        <span class="index-col">${place+1}</span>
-        <span class="record-col">${item.record}</span>
-        <span class="player-col">${item.player} <span class="date-col">${item.date}</span></span>
+            const newListItem = document.createElement('li');
+
+            newListItem.innerHTML = `
+            <span class="index-col">${place+1}</span>
+            <span class="record-col">${item.record}</span>
+            <span class="player-col">${item.player} <span class="date-col">${item.date}</span></span>
+            
+            `
+
+            recordsListing.appendChild(newListItem);
+
+            place++
+
+        } 
         
-        `
-
-        recordsListing.appendChild(newListItem);
-
-        place++
     })
 
 

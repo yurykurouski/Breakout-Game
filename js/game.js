@@ -50,52 +50,49 @@ class Game {
 
     increaseScore(ballSpeed, paddleWidth) {
 
-        switch (ballSpeed) {
+        if (ballSpeed === INITIAL_BALL_dX) {
 
-            case INITIAL_BALL_dX:
+            switch (paddleWidth) {
+                case INITIAL_PADDLE_WIDTH: this.score += POINT_1X;
+                    break;
+                
+                case MIDDLE_PADDLE_WIDTH: this.score += POINT_2X;;
+                    break;
+                
+                case SMALL_PADDLE_WIDTH: this.score += POINT_3X;
+                    break;
+            }
 
-                switch (paddleWidth) {
-                    case INITIAL_PADDLE_WIDTH: this.score += POINT_1X;
-                        break;
-                    
-                    case MIDDLE_PADDLE_WIDTH: this.score += POINT_2X;;
-                        break;
-                    
-                    case SMALL_PADDLE_WIDTH: this.score += POINT_3X;
-                        break;
-                }
+        }
 
-                break;
+        if (ballSpeed === MIDDLE_BALL_dX) {
+
+            switch (paddleWidth) {
+                case INITIAL_PADDLE_WIDTH: this.score += POINT_2X;
+                    break;
+                
+                case MIDDLE_PADDLE_WIDTH: this.score += POINT_4X;;
+                    break;
+                
+                case SMALL_PADDLE_WIDTH: this.score += POINT_6X;
+                    break;
+            }
+
+        }
+
+        if (ballSpeed === FAST_BALL_dX) {
             
-            case MIDDLE_BALL_dX:
+            switch (paddleWidth) {
+                case INITIAL_PADDLE_WIDTH: this.score += POINT_3X;
+                    break;
+                
+                case MIDDLE_PADDLE_WIDTH: this.score += POINT_6X;;
+                    break;
+                
+                case SMALL_PADDLE_WIDTH: this.score += POINT_9X;
+                    break;
+            }
 
-                switch (paddleWidth) {
-                    case INITIAL_PADDLE_WIDTH: this.score += POINT_2X;
-                        break;
-                    
-                    case MIDDLE_PADDLE_WIDTH: this.score += POINT_4X;;
-                        break;
-                    
-                    case SMALL_PADDLE_WIDTH: this.score += POINT_6X;
-                        break;
-                }
-
-                break;
-            
-            case FAST_BALL_dX:
-
-                switch (paddleWidth) {
-                    case INITIAL_PADDLE_WIDTH: this.score += POINT_3X;
-                        break;
-                    
-                    case MIDDLE_PADDLE_WIDTH: this.score += POINT_6X;;
-                        break;
-                    
-                    case SMALL_PADDLE_WIDTH: this.score += POINT_9X;
-                        break;
-                }
-
-                break;
         }
 
     }

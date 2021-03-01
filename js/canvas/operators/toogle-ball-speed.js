@@ -3,46 +3,39 @@ import ball from "../objects/ball.js";
 import storageService from "../../storage-service.js";
 
 function toogleBallSpeed(event) {
-    
 
-    if (
-        game.started &&
-        event.type === "click" ||
-        event.key === " "
-    ) {
-        console.log(event.type)
+    if (game.started) {
+        if (event.type === "click" || event.key === " ") {
 
-        const pauseBtn = document.getElementById('pause-game-btn');
+            const pauseBtn = document.getElementById('pause-game-btn');
 
-        if (ball.dX && ball.dY && game.started) {
-            ball.stopBall();
-            game.pauseGame();
+            if (ball.dX && ball.dY && game.started) {
+                ball.stopBall();
+                game.pauseGame();
 
-            event.target.blur();
+                event.target.blur();
 
-            storageService.set('game', JSON.stringify(game))
+                storageService.set('game', JSON.stringify(game))
 
-            pauseBtn.innerHTML = 'Resume';
+                pauseBtn.innerHTML = 'Resume';
 
-            return
-            
-        } else {
-            ball.resumeBallSpeed();
-            game.resumeGame();
+                return
+                
+            } else {
+                ball.resumeBallSpeed();
+                game.resumeGame();
 
-            event.target.blur();
+                event.target.blur();
 
-            storageService.set('game', JSON.stringify(game))
+                storageService.set('game', JSON.stringify(game))
 
-            pauseBtn.innerHTML = 'Pause'
-            return
+                pauseBtn.innerHTML = 'Pause'
+                return
+            }
         }
-       
     }
-
+    
     return
-
-   
 }
 
 export default toogleBallSpeed;

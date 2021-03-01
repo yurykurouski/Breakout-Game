@@ -12,19 +12,15 @@ function startGame(event) {
         factContainer.classList.remove('show');
     }
 
+    if (!game.paused && !game.started) {
 
-    console.log(game.started, game.paused)
-    if (
-        !game.paused &&
-        !game.started &&
-        event.key === "Enter" ||
-        event.type === "click"
-    ) {
-        toogleGameHandlers();
-        game.startGame();
-        storageService.set('game', JSON.stringify(game))
+        if (event.key === "Enter" || event.type === "click") {
+            toogleGameHandlers();
+            game.startGame();
+            storageService.set('game', JSON.stringify(game))
+        }
+        
     }
-    
 }
 
 export default startGame;

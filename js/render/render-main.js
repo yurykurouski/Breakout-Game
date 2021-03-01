@@ -39,26 +39,22 @@ function renderMainPage() {
     
 
     //update canvas and animation
-    // updateCanvas()
     var intId = setInterval(() => { updateCanvas() }, 18);
 
-    
     //ивенты на управление платформой
     document.addEventListener('keydown', startMovingPaddle);
     document.addEventListener('keyup', stopMovingPaddle);
 
     //старт на ентер
-    if (!game.started ) {
-        document.addEventListener('keydown', startGame )
-    } 
-
-    if (!game.paused) {
-        document.addEventListener('keydown', toogleBallSpeed )
-    }
+    document.addEventListener('keydown', startGame )
+    
+    //пауза на пробел
+    document.addEventListener('keydown', toogleBallSpeed )
 
     //кнопка пауза
     const pauseBtn = document.getElementById('pause-game-btn');
     pauseBtn.addEventListener('click', toogleBallSpeed);
+    
 
     //кнопка старт
     const startGameBtn = document.getElementById('start-game-btn');
@@ -91,22 +87,6 @@ function renderMainPage() {
         function () { goToRecords(intId) } ,
         false
     );
-
-    // const musicBtn = document.getElementById('music-btn');
-    // musicBtn.addEventListener('click', techno);
-
-
-    // const recordsCloseBtn = document.getElementById('close-btn');
-    // const recordsWrapper = document.querySelector('.records-wrapper')
-
-    // recordsBtn.addEventListener('click', () => {
-    //     recordsWrapper.classList.add('show');
-    // })
-
-    // recordsCloseBtn.addEventListener('click', () => {
-    //     recordsWrapper.classList.remove('show');
-    // })
-
 
    
     if (!game.started) {

@@ -14,6 +14,7 @@ import {
 } from "./constants.js";
 
 import backToMain from "./go-to-main.js";
+import storageService from "./storage-service.js";
 
 class Game {
     constructor() {
@@ -81,7 +82,7 @@ class Game {
         }
 
         if (ballSpeed === FAST_BALL_dX) {
-            
+
             switch (paddleWidth) {
                 case INITIAL_PADDLE_WIDTH: this.score += POINT_3X;
                     break;
@@ -114,6 +115,8 @@ class Game {
     }
 }
 
+// const temp = JSON.parse(storageService.get('game'))
+// const playerName = temp.currentPlayer;
 
 const game = new Game();
 

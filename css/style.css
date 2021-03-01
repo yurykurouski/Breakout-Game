@@ -156,10 +156,15 @@ button {
   display: block;
   border-radius: 5px;
   position: relative; }
-.container .score,
-.container .payer_name {
-  font-size: 2rem;
-  font-weight: bold; }
+.container .info {
+  width: 600px;
+  display: flex;
+  padding: 5px; }
+  .container .info .score,
+  .container .info .payer_name {
+    font-size: 2rem;
+    font-weight: bold;
+    flex-basis: 50%; }
 .container .back-btn {
   position: relative;
   top: 0;

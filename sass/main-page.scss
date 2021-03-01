@@ -12,10 +12,17 @@
     position: relative;
   }
 
-  .score,
-  .payer_name {
-    font-size: 2rem;
-    font-weight: bold;
+  .info {
+    width: 600px;
+    display: flex;
+    padding: 5px;
+
+    .score,
+    .payer_name {
+      font-size: 2rem;
+      font-weight: bold;
+      flex-basis: 50%;
+    }
   }
 
   .back-btn {

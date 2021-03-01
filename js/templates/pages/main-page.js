@@ -5,8 +5,11 @@ const mainTemplate =
 `
 
 <div class="banner banner-greeting"></div>
-<span class="payer_name"> </span>
-<span class="score">Score: </span>
+<div class="info">
+    <span class="payer_name"> </span>
+    <span class="score">Score: 0</span>
+</div>
+
 
 <canvas id="canvas" width="${CANVAS_WIDTH}px" height="${CANVAS_HEIGHT}px"></canvas>
 <div class="game-operators">

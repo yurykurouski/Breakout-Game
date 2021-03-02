@@ -13,31 +13,38 @@ import writeRecord from "./records/write-record.js";
 import renderFact from "./render/render-fact.js";
 
 //работает когда мяч падает мимо платформы и когда нажимаем на кнопку рестарт
-export function gameOver() {
+export function gameOver(event) {
     const pauseBtn = document.getElementById('pause-game-btn');
     pauseBtn.innerHTML = 'Pause'
+
+    if (game.started) {
+        if (event.key === "Escape" || event.type === "click") {
+
+            gameOverSound();
+            toogleGameHandlers();
+
+
+            renderFact();
+            
+            writeRecord();
+            
+            game.endGame();
+            game.resetScore();
+
+            storageService.set('game', JSON.stringify(game))
+            storageService.set('ball', JSON.stringify(ball))
+
+            renderScore();
+
+            bricks.showAllBricks();
+            paddle.setInitialPaddlePos();
+            ball.setInitialPos();
+            // ball.setSpeed(ball.dX);
+            ball.setSpeed(ball.dX || ball.tempDX)
+        }
+    }
     
-    gameOverSound();
-    toogleGameHandlers();
-
-
-    renderFact();
     
-    writeRecord();
-    
-    game.endGame();
-    game.resetScore();
-
-    storageService.set('game', JSON.stringify(game))
-    storageService.set('ball', JSON.stringify(ball))
-
-    renderScore();
-
-    bricks.showAllBricks();
-    paddle.setInitialPaddlePos();
-    ball.setInitialPos();
-    // ball.setSpeed(ball.dX);
-    ball.setSpeed(ball.dX || ball.tempDX)
 
 
 }

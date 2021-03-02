@@ -49,6 +49,9 @@ function renderMainPage() {
     //пауза на пробел
     document.addEventListener('keydown', toogleBallSpeed )
 
+    //рестарт на esc
+    document.addEventListener('keydown', gameOver)
+
     //кнопка пауза
     const pauseBtn = document.getElementById('pause-game-btn');
     pauseBtn.addEventListener('click', toogleBallSpeed);

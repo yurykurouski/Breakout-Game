@@ -242,30 +242,21 @@ button {
   border-radius: 5px;
   padding: 10px;
   z-index: 100;
+  max-width: 500px;
   position: absolute;
-  right: 20px;
-  bottom: -100px;
-  max-width: 50%;
-  transition: 0.5s ease-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0s;
   font-weight: bold; }
   .container .fact-container i {
     float: left;
     font-size: 2rem;
     padding-right: 5px; }
   .container .fact-container.show {
-    bottom: 20px; }
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1); }
 
-@media screen and (max-height: 750px) {
-  .container .asside-buttons button {
-    padding: 5px;
-    margin-bottom: 10px;
-    width: 70px;
-    height: 70px; }
-  .container .fact-container {
-    max-width: calc((100% - 640px) / 2); }
-    .container .fact-container.show {
-      right: 10px;
-      bottom: 20px; } }
 .container .settings-btn:disabled,
 .container .records-btn:disabled {
   background-color: #efefef;
@@ -423,14 +414,6 @@ button {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-@media screen and (max-height: 750px) {
-  .music-container.play .music-info {
-    opacity: 1;
-    transform: translateX(0) translateY(-100%);
-    padding-left: 50%;
-    white-space: nowrap; }
-    .music-container.play .music-info h4 {
-      overflow: hidden; } }
 .container ul {
   list-style-type: none;
   width: 500px;
@@ -468,5 +451,44 @@ button {
         transition: 0.2s ease; }
     .container ul li:hover .date-col {
       bottom: 80%; }
+
+@media screen and (max-height: 750px) and (max-width: 1200px) {
+  .container {
+    padding-left: 100px; } }
+@media screen and (max-height: 750px) and (max-width: 1150px) {
+  .container {
+    padding-left: 150px; } }
+@media screen and (max-height: 750px) and (max-width: 1100px) {
+  .container {
+    padding-left: 200px; } }
+@media screen and (max-height: 750px) and (max-width: 1050px) {
+  .container {
+    padding-left: 250px; } }
+@media screen and (max-height: 750px) and (max-width: 1050px) {
+  .container {
+    padding-left: 300px; } }
+@media screen and (max-height: 750px) and (max-width: 1200px) {
+  .container .fact-container.show {
+    margin-left: 50px; } }
+@media screen and (max-height: 750px) and (max-width: 1150px) {
+  .container .fact-container.show {
+    margin-left: 75px; } }
+@media screen and (max-height: 750px) and (max-width: 1100px) {
+  .container .fact-container.show {
+    margin-left: 100px; } }
+@media screen and (max-height: 750px) and (max-width: 1050px) {
+  .container .fact-container.show {
+    margin-left: 125px; } }
+@media screen and (max-height: 750px) and (max-width: 1050px) {
+  .container .fact-container.show {
+    margin-left: 150px; } }
+@media screen and (max-height: 750px) {
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateX(0) translateY(-100%);
+    padding-left: 50%;
+    white-space: nowrap; }
+    .music-container.play .music-info h4 {
+      overflow: hidden; } }
 
 /*# sourceMappingURL=style.css.map */

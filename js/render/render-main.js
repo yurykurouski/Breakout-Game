@@ -1,5 +1,5 @@
 import { gameOver } from '../gameOver.js';
-import { playAudio } from '../audio/audio-sounds.js';
+import sounds from '../audio/audio-sounds.js';
 import updateCanvas from './update-canvas.js';
 import storageService from '../storage-service.js';
 import renderInitialPage from './render-initial.js';
@@ -94,7 +94,7 @@ function renderMainPage() {
         toggleDisabled(pauseBtn, startGameBtn, restartGameBtn);
     }
 
-    playAudio(window);
+    sounds.renderPageSound();
 }
 
 

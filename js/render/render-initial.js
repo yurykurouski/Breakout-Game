@@ -1,6 +1,6 @@
 import game from '../game.js';
 import runGame from '../run-game.js';
-import { playAudio } from '../audio/audio-sounds.js';
+import sounds from '../audio/audio-sounds.js';
 import bricks from '../canvas/objects/brick.js';
 import storageService from '../storage-service.js';
 import { toggleDisabled, changeColorMode } from '../utils.js';
@@ -27,13 +27,13 @@ function renderInitialPage() {
     rulesBtn.addEventListener('click', () => {
         rules.classList.add('show');
         toggleDisabled(runGameFormInput, runGameFormSubmit);
-        playAudio(rulesBtn);
+        sounds.showRulesSound();
     })
 
     rulesCloseBtn.addEventListener('click', () => {
         rules.classList.remove('show');
         toggleDisabled(runGameFormInput, runGameFormSubmit);
-        playAudio(rulesBtn);
+        sounds.showRulesSound();
     })
 
 
@@ -41,7 +41,7 @@ function renderInitialPage() {
     const colorModeBtn = document.getElementById('color-mode-btn');
     colorModeBtn.addEventListener('click', () => {
         changeColorMode(),
-        playAudio(colorModeBtn)
+        sounds.switchColorThemeSound();
     })
 
 
@@ -52,7 +52,7 @@ function renderInitialPage() {
 
 
     //обработчик событий на включение музыки
-    playAudio(window);
+    sounds.renderPageSound();
 }
 
 export default renderInitialPage;

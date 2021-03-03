@@ -1,5 +1,5 @@
 import { setCheckedInputs, showBanner } from "../utils.js";
-import { playAudio } from "../audio/audio-sounds.js";
+import sounds from "../audio/audio-sounds.js";
 import storageService from "../storage-service.js";
 import settingsTemplate from "../templates/pages/settings-page.js";
 import backToMain from "./../go-to-main.js"
@@ -40,7 +40,7 @@ function renderSettingsPage() {
     setCheckedInputs(speedInputs, ball.dX || ball.tempDX)
 
 
-    playAudio(window);
+    sounds.renderPageSound();
 
 }
 

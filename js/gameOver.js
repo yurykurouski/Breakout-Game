@@ -18,7 +18,11 @@ export function gameOver(event) {
     pauseBtn.innerHTML = 'Pause'
 
     if (game.started) {
-        if (event.key === "Escape" || event.type === "click") {
+        if (
+            !event ||
+            event.key === "Escape" ||
+            event.type === "click"
+        ) {
 
             sounds.gameOverSound();
             toogleGameHandlers();

@@ -4,38 +4,48 @@ import storageService from "../../storage-service.js";
 
 function toogleBallSpeed(event) {
 
-    if (game.started) {
-        if (event.type === "click" || event.key === " ") {
+    if (!game.started) { return }
+   
+    if (event.key === " " || event.type === "click") {
 
-            const pauseBtn = document.getElementById('pause-game-btn');
+        const pauseBtn = document.getElementById('pause-game-btn');
 
-            if (ball.dX && ball.dY && game.started) {
-                ball.stopBall();
-                game.pauseGame();
+        if (ball.dX && ball.dY && game.started) {
+            
+            console.log(event.key);
 
-                event.target.blur();
+            ball.stopBall();
+            game.pauseGame();
 
-                storageService.set('game', JSON.stringify(game))
+            console.log(pauseBtn);
 
-                pauseBtn.innerHTML = 'Resume';
+            pauseBtn.innerHTML = 'Resume';
+            // pauseBtn.style.display = 'none'
 
-                return
-                
-            } else {
-                ball.resumeBallSpeed();
-                game.resumeGame();
+            storageService.set('game', JSON.stringify(game))
+            event.target.blur();
 
-                event.target.blur();
+            return
+            
+        } else {
+            ball.resumeBallSpeed();
+            game.resumeGame();
 
-                storageService.set('game', JSON.stringify(game))
+            console.log(pauseBtn.innerHTML);
+            
+            pauseBtn.innerHTML = 'Pause'
 
-                pauseBtn.innerHTML = 'Pause'
-                return
-            }
+            storageService.set('game', JSON.stringify(game))
+            event.target.blur();
+            
+            return
         }
+
+        
     }
+
     
-    return
+
 }
 
 export default toogleBallSpeed;

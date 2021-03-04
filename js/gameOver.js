@@ -14,8 +14,7 @@ import renderFact from "./render/render-fact.js";
 
 //работает когда мяч падает мимо платформы и когда нажимаем на кнопку рестарт
 export function gameOver(event) {
-    const pauseBtn = document.getElementById('pause-game-btn');
-    pauseBtn.innerHTML = 'Pause'
+    
 
     if (game.started) {
         if (
@@ -23,6 +22,9 @@ export function gameOver(event) {
             event.key === "Escape" ||
             event.type === "click"
         ) {
+
+            const pauseBtn = document.getElementById('pause-game-btn');
+            pauseBtn.innerHTML = 'Pause'
 
             sounds.gameOverSound();
             toogleGameHandlers();

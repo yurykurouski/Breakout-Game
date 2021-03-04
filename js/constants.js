@@ -1,7 +1,7 @@
-export const INDEX_URL = ['/', '/index.html', 'https://fedorowpavel.github.io/Breakout-Game/'];
-export const MAIN_URL = ['/main', 'https://fedorowpavel.github.io/Breakout-Game/main'];
-export const SETTINGS_URL = ['/settings', 'https://fedorowpavel.github.io/Breakout-Game/settings'];
-export const RECORDS_URL = ['/records', 'https://fedorowpavel.github.io/Breakout-Game/records'];
+export const INDEX_URL = ['/', '/index.html', 'fedorowpavel.github.io/Breakout-Game/'];
+export const MAIN_URL = ['/main', 'fedorowpavel.github.io/Breakout-Game/main'];
+export const SETTINGS_URL = ['/settings', 'fedorowpavel.github.io/Breakout-Game/settings'];
+export const RECORDS_URL = ['/records', 'fedorowpavel.github.io/Breakout-Game/records'];
 
 
 export const INITIAL_ZERO_RECORD = 0;
